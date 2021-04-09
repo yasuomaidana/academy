@@ -24,7 +24,8 @@ import { MothlyComponent } from './menu/mothly/mothly.component';
     WeeklyComponent,
     Week1Component,
     Week2Component,
-    MothlyComponent
+    MothlyComponent,
+    
   ],
   imports: [
     BrowserModule,
