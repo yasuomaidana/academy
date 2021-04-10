@@ -1,0 +1,10 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle *ngFor="let month of months">
+    
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{month.name}}</mat-panel-title>
+      <mat-panel-description>{{month.description}}</mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-container *ngComponentOutlet="month.component"></ng-container>
+  </mat-expansion-panel>  
+</mat-accordion>
