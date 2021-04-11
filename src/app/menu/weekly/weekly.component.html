@@ -1,8 +1,8 @@
 <mat-accordion>
-  <mat-expansion-panel hideToggle *ngFor="let week of weeks" class="week">
+  <mat-expansion-panel hideToggle *ngFor="let week of weeks" class="exP">
     <mat-expansion-panel-header>
-      <mat-panel-title>{{week.name}}</mat-panel-title>
-      <mat-panel-description>{{week.description}}</mat-panel-description>
+      <mat-panel-title style="color: white;">{{week.name}}</mat-panel-title>
+      <mat-panel-description style="color: white;">{{week.description}}</mat-panel-description>
     </mat-expansion-panel-header>
     <ng-container *ngComponentOutlet="week.component"></ng-container>
   </mat-expansion-panel>
