@@ -1,5 +1,7 @@
-<div fxLayout="row" fxLayoutGap="15px">
-  <mat-card class="example-card" fxFlex="50%" color="accent" *ngFor="let book of books">
+<div fxLayout="row" fxLayoutGap="15px" cols="2">
+  <mat-card class="example-card" fxFlex="50%" 
+  color="accent" *ngFor="let book of books"
+  (click)="openBook(book.page)">
       <mat-card-header>
         <div mat-card-avatar class="book-header-image" 
         style="background-image: url('{{book.imageA}}')">
