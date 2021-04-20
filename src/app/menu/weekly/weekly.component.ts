@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Week1Component } from './week1/week1.component'
 import { Week2Component } from './week2/week2.component'
+import { Week3Component } from './week3/week3.component';
 @Component({
   selector: 'app-weekly',
   templateUrl: './weekly.component.html',
@@ -17,6 +18,11 @@ export class WeeklyComponent implements OnInit {
       "name":"Week 2",
       "description":"From April 5th to April 9th",
       "component":Week2Component
+    },
+    {
+      "name":"Week 3",
+      "description":"From April 12th to April 16th",
+      "component":Week3Component
     }
   ];
   constructor() {
