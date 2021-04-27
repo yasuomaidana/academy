@@ -22,6 +22,7 @@ import { Month1Component } from './menu/monthly/month1/month1.component';
 import { Book1Component } from './menu/monthly/month1/book1/book1.component';
 import { Book2Component } from './menu/monthly/month1/book2/book2.component';
 import { Week3Component } from './menu/weekly/week3/week3.component';
+import { Week4Component } from './menu/weekly/week4/week4.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { Week3Component } from './menu/weekly/week3/week3.component';
     Book1Component,
     Book2Component,
     Week3Component,
+    Week4Component,
     
   ],
   imports: [
