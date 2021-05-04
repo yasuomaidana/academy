@@ -1,0 +1,463 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> The Pretotyping Manifesto - Stanford Graduate School of Business </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>The
+law of failure: Most of new ideas fails</P>
+<P>Make
+sure you are building the right it before built it right</P>
+<P>IT:
+innovate technology, idea to try</P>
+<P>The
+pretotyping manifesto:</P>
+<UL>
+	<LI><P>Innovators
+	beat ideas</P>
+	<LI><P>Pretotypes
+	beats productypes</P>
+	<LI><P>Doing
+	beats talking</P>
+	<LI><P>Simple
+	beats complex</P>
+	<LI><P>Nows
+	beats later</P>
+	<LI><P>Commitment
+	beats committees</P>
+	<LI><P>Data
+	beats opinions</P>
+</UL>
+<div class='images'><img src='assets/Week 5/1.png'></div><div class='images'><img src='assets/Week 5/2.png'></div><div class='images'><img src='assets/Week 5/3.png'></div><div class='images'><img src='assets/Week 5/4.png'></div>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Seth Lloyd on Programming the Universe </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Changing
+by mutation s</P>
+<P>Quantity
+of information is different than meaning of information</P>
+<P>History
+about information</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Why you should have your own black box | Matthew Syed | TEDxLondonBusinessSchool </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Aviations
+vs Healthcare</P>
+<P>Learning
+vs Justification</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Kolton Andrus on Breaking Things at Netflix </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Every
+system will fail on some point, the thing is how it will afford that
+failure, what could happen</P>
+<P>AMAZING</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Chaos Engineering: the history, principles, and practice </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Chaos
+Engineering is a disciplined approach to identifying failures before
+they become outages. By proactively testing how a system responds
+under stress, you can identify and fix failures before they end up in
+the news. That helps you to build more resilient systems</P>
+<P><B>What
+are the Principles of Chaos Engineering?</B></P>
+<div class='images'><img src='assets/Week 5/5.png'></div><P><B>Why
+would you break things on purpose?</B></P>
+<P>Chaos
+Engineering is a tool we use to build such an immunity in our
+technical systems by injecting harm (like latency, CPU failure, or
+network black holes) in order to find and mitigate potential
+weaknesses.</P>
+<P>By
+breaking things on purpose we surface unknown issues that could
+impact our systems and customers.</P>
+<P><B>Fallacies
+of Distributed Systems:</B></P>
+<UL>
+	<LI><P>The
+	network is reliable</P>
+	<LI><P>Latency
+	is zero</P>
+	<LI><P>Bandwidth
+	is infinite</P>
+	<LI><P>The
+	network is secure</P>
+	<LI><P>Topology
+	doesn't change</P>
+	<LI><P>There
+	is one administrator</P>
+	<LI><P>Transport
+	cost is zero</P>
+	<LI><P>The
+	network is homogeneous</P>
+</UL>
+<P><B>What
+are the customer, business, and technical benefits of Chaos
+Engineering?</B></P>
+<UL>
+	<LI><P>Customer:
+	No outages disrupt their day-to-day lives.</P>
+	<LI><P>Business:</P>
+	<UL>
+		<LI><P>Prevent
+		extremely large losses in revenue and maintenance costs</P>
+		<LI><P>Create
+		happier and more engaged engineers</P>
+		<LI><P>Improve
+		in on-call training for engineering teams</P>
+		<LI><P>Improve
+		the incident management program</P>
+	</UL>
+	<LI><P>Technical:
+	</P>
+	<UL>
+		<LI><P>Reduction
+		in incidents</P>
+		<LI><P>Reduction
+		in on-call burden</P>
+		<LI><P>Increased
+		understanding of system failure modes</P>
+		<LI><P>Improved
+		system design</P>
+		<LI><P>Faster
+		mean time to detection for SEVs, and reduction in repeated SEVs.</P>
+	</UL>
+</UL>
+<P><B>Which
+Chaos Engineering experiments do you perform first?</B></P>
+<div class='images'><img src='assets/Week 5/6.png'></div><P>Order</P>
+<OL>
+	<LI><P>Known
+	knowns</P>
+	<LI><P>Known
+	unknowns</P>
+	<LI><P>Unknown
+	knowns</P>
+	<LI><P>Unknown
+	unknowns</P>
+</OL>
+<P><B>Planning
+your First Experiment</B></P>
+<P>Which
+scenarios are more likely (or more frightening) and should be tested
+first. 
+</P>
+<P><B>Creating
+a Hypothesis</B></P>
+<P>What
+will be the impact to customers, to your service, or to your
+dependencies?</P>
+<P><B>Measuring
+the Impact</B></P>
+<P>It
+is good to have a key performance metric that correlates to customer
+success (such as orders per minute). 
+</P>
+<P>As
+a rule of thumb, if you ever see an impact to these metrics, you want
+to halt the experiment immediately. 
+</P>
+<P>Next
+is measuring the failure itself where you want to verify (or
+disprove) your hypothesis. 
+</P>
+<UL>
+	<LI><P>This
+	could be the impact on latency, requests per second, or system
+	resources. 
+	</P>
+	<LI><P>Lastly,
+	you want to survey your dashboards and alarms for unintended side
+	effects.</P>
+</UL>
+<P><B>Have
+a Rollback Plan</B></P>
+<P>All
+of our attack's must can be reverted immediately, allowing you to
+safely abort and return to steady state if things go wrong.</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Testing Engineering@Google The Release Process for Google's Chrome for iOS </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P><B>Software
+engineer in test</B></P>
+<P>Focused
+on testability- refactor code to make it easier to for test authoring</P>
+<P>Focused
+on development and release efficiency</P>
+<P>Developer
+oriented</P>
+<P>Develop
+build, release, and test automation framework</P>
+<P><B>Test
+engineer</B></P>
+<P>Focused
+on largely on functional testing and scenario testing</P>
+<P>Product
+and user focused</P>
+<P>Tend
+to be product and/pr domain experts</P>
+<P>Read
+and debug product code and write test code</P>
+<P>Test
+planning, strategy, risk, and test design is key</P>
+<P>They
+use bots for automated testing they have:</P>
+<UL>
+	<LI><P>Unittests</P>
+	<LI><P>End
+	to end tests with KIF</P>
+	<LI><P>Performance
+	tests</P>
+	<LI><P>Screenshot
+	tests</P>
+</UL>
+<P>Manual
+testing have</P>
+<UL>
+	<LI><P>Test
+	cases that can’t be automated</P>
+	<LI><P>Test
+	coverage regardless of test status being flakey</P>
+	<LI><P>Test
+	cases that haven’t been automated yet</P>
+	<LI><P>New
+	features that don’t have end to end tests yet</P>
+</UL>
+<P> Say
+what you changed</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Richard Feynman, The Great Explainer: Great Minds </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>AMAZING</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> GTAC 2014: Test coverage at Google </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P><B>Code
+review</B></P>
+<UL>
+	<LI><P>Before
+	check in</P>
+	<LI><P>Web
+	based</P>
+	<UL>
+		<LI><P>Streamlined</P>
+	</UL>
+	<LI><P>Small,
+	incremental changes</P>
+	<UL>
+		<LI><P>Efficient</P>
+	</UL>
+	<LI><P>Mandatory</P>
+	<UL>
+		<LI><P>Enforced
+		by tools</P>
+		<LI><P>Automated
+		analysis</P>
+		<UL>
+			<LI><P>Fully
+			automated</P>
+			<LI><P>Style
+			guide compliance?</P>
+			<LI><P>Do
+			the tests pass?</P>
+			<LI><P>Fast</P>
+			<LI><P>Test
+			coverage?</P>
+		</UL>
+	</UL>
+</UL>
+<P>Code
+review - Human touch</P>
+<UL>
+	<LI><P>2
+	seal of approval</P>
+	<LI><P>Owner
+	of the code you are changing</P>
+	<LI><P>Readability</P>
+	<UL>
+		<LI><P>Certifies
+		language style knowledge</P>
+	</UL>
+	<LI><P>Reviewers
+	see the results of automatic analysis too</P>
+</UL>
+<P>Test
+coverage</P>
+<UL>
+	<LI><P>Measure
+	used to describe how much the test excessive the code</P>
+	<LI><P>Types:</P>
+	<UL>
+		<LI><P>Function</P>
+		<LI><P>Statement</P>
+		<LI><P>Branch</P>
+		<LI><P>Other</P>
+	</UL>
+</UL>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> TEDxCaltech - Danny Hillis - Reminiscing about Richard Feynman </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Inspiring</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Feynman on Scientific Method. </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <OL>
+	<LI><P>We
+	guessed</P>
+	<LI><P>Compute
+	the consequences of the guess</P>
+	<LI><P>Compare
+	the computation result to nature</P>
+</OL>
+<P>We
+can only be sure we are wrong</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> TEDxCaltech - Tony Hey - Feynman and Computation </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Pipelining</P>
+<P>Feynman
+diagram</P>
+<P>Quantum
+computer</P>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> GTAC 2014: I Don't Test Often ... But When I Do, I Test in Production </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Freedom and
+responsibility</P>
+<UL>
+	<LI><P>Developers
+	deploy when they want</P>
+	<LI><P>They also
+	manage their own capacity and autoscaling</P>
+	<LI><P>And are
+	on-call to fix anything that breaks at 3am (disponible)</P>
+</UL>
+<P>Failure is all
+around us</P>
+<P>Design to avoid
+failure</P>
+<UL>
+	<LI><P>Exception
+	handling</P>
+	<LI><P>Redundancy</P>
+	<LI><P>Fallback or
+	degraded experience (circuit breakers)</P>
+</UL>
+<P>Testing</P>
+<UL>
+	<LI><P>Unit</P>
+	<LI><P>Integration</P>
+	<LI><P>Stress</P>
+	<LI><P>Exhaustive
+	testing to simulate all failures modes</P>
+	<LI><P>Cause
+	failure deliberately to validate resiliency</P>
+	<LI><P>Test design
+	assumption by stressing them</P>
+	<LI><P>Don't wait for random failure. Remove its uncertainty by forcing it regularly</P>
+</UL>
+<P>Canary
+deployment</P>
+<UL>
+	<LI><P>Push
+	change to small number of instances</P>
+	<LI><P>Use
+	Asgard for red/black push</P>
+	<LI><P>Monitor
+	closely to detect regressions</P>
+	<LI><P>Automated
+	canary analysis</P>
+	<LI><P>Automatically
+	cancel deployment if problems occur</P>
+</UL>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> GTAC 2014: The Testing User Experience </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <P>Testing
+is a problem when you have very large projects, architecture</P>
+<div class='images'><img src='assets/Week 5/7.png'></div>
+</mat-expansion-panel>
