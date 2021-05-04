@@ -3,6 +3,7 @@ import { Book1Component } from './book1/book1.component';
 import { MatDialog} from '@angular/material/dialog';
 import { ComponentType } from '@angular/cdk/portal';
 import { Book2Component } from './book2/book2.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @Component({
   selector: 'app-month1',
@@ -23,6 +24,12 @@ export class Month1Component implements OnInit {
       "imageA":"assets/Month 1/MSA.jpg",
       "imageB":"assets/Month 1/MakeStick.jpg",
       "page":Book2Component
+    },{
+      "title":"Summary month 1",
+      "author":"Yasuo Maidana",
+      "imageA":"assets/Month 1/fotos.jpg",
+      "imageB":"assets/Month 1/studying.jpg",
+      "page":ResumeComponent
     }];
   constructor(private dialog:MatDialog) { }
 
