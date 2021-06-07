@@ -25,6 +25,12 @@ import { Week3Component } from './menu/weekly/week3/week3.component';
 import { Week4Component } from './menu/weekly/week4/week4.component';
 import { Week5Component } from './menu/weekly/week5/week5.component';
 import { ResumeComponent } from './menu/monthly/month1/resume/resume.component';
+import { Week6Component } from './menu/weekly/week6/week6.component';
+import { Week7Component } from './menu/weekly/week7/week7.component';
+import { Week8Component } from './menu/weekly/week8/week8.component';
+import { Week9Component } from './menu/weekly/week9/week9.component';
+import { Week10Component } from './menu/weekly/week10/week10.component';
+import { Month2Component } from './menu/monthly/month2/month2.component';
 
 
 @NgModule({
@@ -43,6 +49,12 @@ import { ResumeComponent } from './menu/monthly/month1/resume/resume.component';
     Week4Component,
     Week5Component,
     ResumeComponent,
+    Week6Component,
+    Week7Component,
+    Week8Component,
+    Week9Component,
+    Week10Component,
+    Month2Component,
     
   ],
   imports: [
