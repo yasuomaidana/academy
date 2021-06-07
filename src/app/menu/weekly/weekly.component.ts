@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Week1Component } from './week1/week1.component'
-import { Week10Component } from './week10/week10.component';
-import { Week2Component } from './week2/week2.component'
+import { Week1Component } from './week1/week1.component';
+import { Week2Component } from './week2/week2.component';
 import { Week3Component } from './week3/week3.component';
 import { Week4Component } from './week4/week4.component';
 import { Week5Component } from './week5/week5.component';
@@ -9,6 +8,7 @@ import { Week6Component } from './week6/week6.component';
 import { Week7Component } from './week7/week7.component';
 import { Week8Component } from './week8/week8.component';
 import { Week9Component } from './week9/week9.component';
+import { Week10Component } from './week10/week10.component';
 @Component({
   selector: 'app-weekly',
   templateUrl: './weekly.component.html',
