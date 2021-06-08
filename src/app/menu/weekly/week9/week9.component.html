@@ -1,1 +1,62 @@
-<p>week9 works!</p>
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> SLACK's API  </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>This week I have worked with SLACK's API. </p>
+    <p>API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. </p>
+    <p>SLACK's API works with web requests. It has several types of layers and functions. </p>
+    <p>I'll mention some of them just below. </p>
+    <ul>
+        <li><p>RTM:
+        Real-time messaging. It works with WebSockets. The documentation
+        recommends avoiding using them. It is a legacy that works fine for
+        small teams, but as users increment, its performance plummeted. 
+        </p>
+        <li><p>Events:
+        They pick events of interest. Slack will send it through HTTP. They
+        are focused on actions (for example, clicked buttons). 
+        </p>
+        <li><p>Web-API:
+        It is used to receive information from outside (another app or
+        site). 
+        </p>
+        <li><p>Conversation:
+        Subsets of Web-API that calls slack directly. 
+        </p>
+    </ul>
+    <p>Slack Features 
+    </p>
+    <p>The slack commands work almost everywhere, channels, conversations, group conversation. 
+    </p>
+    <p>Block-kit. It provides all the GUI elements. They are defined by JSON </p>
+    <p>There exist two ways of posting messages. 
+    </p>
+    <ol>
+        <li><p>Incoming
+        webhook 
+        </p>
+        <li><p>Using
+        chat.postMessage function 
+        </p>
+    </ol>
+    <p>Incoming webhook </p>
+    <p>They are the simplest but least flexible they can generate post messages on channels. They are used via single-use URLs. They also can send notifications from other servers and read data from slack. </p>
+    <p>chat.postMessage</p>
+    <p>They call SLACK's API through HTTP. They can post everywhere and receive responses. </p>
+    <p>Ephemeralmessages </p>
+    <p>Messages in channels that only show to specific users, disappear with time. There is no guarantee that the messages reach their intended if they are not logged at the time. </p>
+    <p>Dialogs</p>
+    <p>They can only be created in response to a direct user action and supports:</p>
+    <ul>
+        <li><p>Single
+        line text entries 
+        </p>
+        <li><p>Dropdown
+        select 
+        </p>
+        <li><p>Longer
+        text area (limited to 3000 characters)</p>
+    </ul>
+</mat-expansion-panel>
