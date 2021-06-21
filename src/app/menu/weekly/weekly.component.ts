@@ -9,6 +9,8 @@ import { Week7Component } from './week7/week7.component';
 import { Week8Component } from './week8/week8.component';
 import { Week9Component } from './week9/week9.component';
 import { Week10Component } from './week10/week10.component';
+import { Week11Component } from './week11/week11.component';
+import { Week12Component } from './week12/week12.component';
 @Component({
   selector: 'app-weekly',
   templateUrl: './weekly.component.html',
@@ -65,6 +67,16 @@ export class WeeklyComponent implements OnInit {
       "name":"Week 10",
       "description":"From May 31st to June 5th",
       "component":Week10Component
+    },
+    {
+      "name":"Week 11",
+      "description":"From June 7th to June 11th",
+      "component":Week11Component
+    },
+    {
+      "name":"Week 12",
+      "description":"From June 14th to June 18th",
+      "component":Week12Component
     }
   ];
   constructor() {
