@@ -1,3 +1,4 @@
 node_modules
 dist
 academy
+.DS_Store
