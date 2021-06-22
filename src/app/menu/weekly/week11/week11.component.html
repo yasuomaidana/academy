@@ -1,1 +1,202 @@
-<p>week11 works!</p>
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Java learning </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>This week I started to study java, and I got the following highlights.</p>
+	<h2>Hashmap vs Hashtable</h2>
+	<ol>
+		<li><p>HashMap is non-synchronized. It is not thread safe and can't be shared between many threads without proper synchronization code whereas Hashtable is synchronized. It is thread-safe and can be shared with many threads. </p></li>
+		<li><p>HashMap allows one null key and multiple null values whereasHashtable doesn't allow any null key or value.</p></li>
+		<li><p>HashMap is generally preferred over HashTable if thread synchronization is not needed</p></li>
+	</ol>
+	<h2>Java Package</h2>
+	<p>A <b>java package</b> is a group of similar types of classes, interfaces, and sub-packages.</p>
+	<p>Package in java can be categorized in two forms: </p>
+	<ul>
+		<li><p>built-in
+		package 
+		</p>
+		<li><p>user-defined
+		package</p>
+	</ul>
+	<h2>Advantage of Java Package</h2>
+	<ol>
+		<li><p>Java package is used to categorize the classes and interfaces</p></li>
+		<li><p>Java package provides access protection.</p></li>
+	</ol>
+	<h2>Collections and maps</h2>
+		<div class='images'><img src='assets/Week 11/1.png'></div>	<h2>Interfaces in Java</h2>
+	<p>An interface can have methods and variables, but the methods declared in an interface are by default abstract (only method signature, no body).  </p>
+	<ul>
+		<li><p>Interfaces specify what a class must do and not how. It is the blueprint of the class.</p>
+		<li><p>An Interface is about capabilities like a Player may be an interface	and any class implementing Player must be able to (or must implement) move(). So it specifies a set of methods that the class has to implement.</p>
+		<li><p>If a class implements an interface and does not provide method bodies for all functions specified in the interface, then the class must be declared abstract.</p>
+	</ul>
+	<h3>Why do we use interface?</h3>
+	<ul>
+		<li><p> It is used to achieve total abstraction.</p>
+		<li><p> Since java does not support multiple inheritance in case of class, but<b>	by using interface it can achieve multiple inheritance.</b></p>
+		<li><p> It is also used to achieve loose coupling.</p>
+	</ul>
+	<h2>Difference between Abstract
+	Class and Interface in Java</h2>
+	<p><b>Abstraction:</b>
+	Hiding the internal implementation of the feature and only showing
+	the functionality to the users. Both abstract class and interface are
+	used for abstraction.</p>
+	<p>Abstract	class vs Interface 	</p>
+	<ul>
+		<li><p>Type of
+		methods: <b>Interface can have only
+		abstract methods</b>. An abstract class
+		can have abstract and non-abstract methods. It can have default and
+		static methods also.</p>
+		<li><p>Final
+		Variables: Variables declared in a Java interface are by default
+		final. An abstract class may contain non-final variables.</p>
+		<li><p>Type of
+		variables: Abstract class can have final, non-final, static and
+		non-static variables. The <b>interface has
+		only static and final variables</b>.</p>
+		<li><p>Implementation:
+		Abstract class can provide the implementation of the interface.
+		Interface can't provide the implementation of an abstract class.</p>
+		<li><p>Inheritance
+		vs Abstraction: A Java interface can be implemented using the
+		keyword “implements” and an abstract class can be extended using
+		the keyword “extends”.</p>
+		<li><p>Multiple
+		implementations: An interface can extend another Java interface
+		only, an abstract class can extend another Java class and implement
+		multiple Java interfaces.</p>
+		<li><p>Accessibility
+		of Data Members: Members of a Java interface are public by default.
+		A Java abstract class can have class members like private,
+		protected, etc.</p>
+	</ul>
+	<div class='images'><img src='assets/Week 11/2.png'></div>
+	<h2>What does 'public static void'
+	mean in Java?</h2>
+	<p>It's
+	three completely different things:</p>
+	<ul>
+		<li><p>public means that the method is visible and can be called from other objects of other types. Other alternatives are private,	protected, package and package-private.	See <a HREF="http://java.sun.com/docs/books/tutorial/java/javaOO/accesscontrol.html">here</a>for more details.</p></li>
+		<li><p>static
+			means that the method is associated with the class, not a specific
+			instance (object) of that class. This means that you can call a
+			static method without creating an object of the class.</p></li>
+		<li><p>void
+			means that the method has no return value. If the method returned an
+			int
+			you would write int
+			instead of void.</p></li>
+	</ul>
+	<h2>Singleton Class in Java</h2>
+	<p>In
+	object-oriented programming, a singleton class is a class that can
+	have only one object (an instance of the class) at a time.</p>
+	<h2>What Is a Memory Leak</h2>
+	<p>A Memory Leak is
+	a situation when there are objects present in the heap that are no
+	longer used, but the garbage collector is unable to remove them from
+	memory and, thus they are unnecessarily maintained.</p>
+	<p>A memory leak is
+	bad because it blocks memory resources and degrades system
+	performance over time.</p>
+	<p>
+	</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> C++ </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<h2>Enumeration in C++</h2>
+	<p>Enum is a user
+	defined data type where we specify a set of values for a variable and
+	the variable can only take one out of a small set of possible values.
+	We use enum keyword to define a Enumeration.</p>
+	<p>Enums are used
+	only when we expect the variable to have one of the possible set of
+	values, for example, we have a dir variable that holds the direction.
+	Since we have four directions, this variable can take any one of the
+	four values, if we try to assign a another random value to this
+	variable, it will throw a compilation error. This increases
+	compile-time checking and avoid errors that occurs by passing in
+	invalid constants.</p>
+	<h2>Structure vs class in C++</h2>
+	<p>In C++, a
+	structure is the same as a class except for a few differences. The
+	most important of them is security. A Structure is not secure and
+	cannot hide its implementation details from the end-user while a
+	class is secure and can hide its programming and designing details.</p>
+	<OL>
+		<li><p>Members of a
+		class are private by default and members of a structure are public
+		by default.</p>
+		<li><p>When
+		deriving a struct from a class/struct, the default access-specifier
+		for a base class/struct is public. And when deriving a class, the
+		default access specifier is private.</p>
+		<li><p>Class can
+		have null values but the structure cannot have null values.</p>
+		<li><p>Memory of structure is
+		allocated in the stack while the memory of class is allocated in
+		heap.</p>
+		<li><p>Class requires constructor and
+		destructor but the structure cannot require it.</p>
+		<li><p> Classes support polymorphism
+		and also be inherited but the structure cannot be inherited.</p>
+	</OL>
+	<h2>C++ Classes and Objects</h2>
+	<ul>
+		<li><p>A Class is a user defined
+		data-type which has data members and member functions.</p>
+		<li><p>Data members are the data
+		variables and member functions are the functions used to manipulate
+		these variables and together these data members and member functions
+		defines the properties and behavior of the objects in a Class.</p>
+		<li><p>In the above example of class
+		Car, the data member will be speed limit, mileage etc and member
+		functions can be apply brakes, increase speed etc.</p>
+		<li><p>An Object is an instance of a
+		Class. When a class is defined, no memory is allocated but when it
+		is instantiated (i.e. an object is created) memory is allocated.</p>
+		<li><p>Accessing data members and
+		member functions: The data members and member functions of class can
+		be accessed using the dot(‘.') operator with the object.</p>
+		<li><p>The public data members are
+		also accessed in the same way given however the private data members
+		are not allowed to be accessed directly by the object. Accessing a
+		data member depends solely on the access control of that data
+		member.</p>
+		<li><p>Constructors are special class
+		members which are called by the compiler every time an object of
+		that class is instantiated. Constructors have the same name as the
+		class and may be defined inside or outside the class definition.</p>
+		<li><p>Destructor is another special
+		member function that is called by the compiler when the scope of the
+		object ends.</p>
+	</ul>
+	<h2>Inheritance in C++ <a HREF="https://www.geeksforgeeks.org/inheritance-in-c/">link</a></h2>
+	<p>The capability of a class to derive
+	properties and characteristics from another class is called
+	Inheritance. Inheritance is one of the most important feature of
+	Object Oriented Programming. Sub Class: The class that inherits
+	properties from another class is called Sub class or Derived Class.
+	Super Class:The class whose properties are inherited by sub class
+	is called Base Class or Super class.</p>
+	<h2>Templates in C++</h2>
+	<p>A template is a simple and yet very
+	powerful tool in C++. The simple idea is to pass data type as a
+	parameter so that we don't need to write the same code for
+	different data types</p>
+	<p>
+	</p>
+</mat-expansion-panel>
