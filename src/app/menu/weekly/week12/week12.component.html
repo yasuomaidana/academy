@@ -57,7 +57,6 @@
     </mat-expansion-panel-header>
     		<code>ck@mintp ~ $ ffmpeg -i /tmp/Video.mp4 -vf &quot;fps=10&quot; -loop 0
 	/tmp/output3.gif</code>
-	<h1 id="what-is-an-array-prototype-method-and-what-is-the-advantages-of-using-arrow-function-with-them-in-javascript">What is an array prototype method and what is the advantages of using arrow function with them in JavaScript?</h1>
 
 </mat-expansion-panel>
 
@@ -151,15 +150,16 @@
 	<div class="footnotes">
 	<hr />
 	<ol>
-	<li id="fn1"><p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></p></li>
-	<li id="fn2"><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#using_prototypes_in_JavaScript">Inheritance and the prototype chain</a></p></li>
-	<li id="fn3"><p><a href="https://www.tutorialsteacher.com/JavaScript/prototype-in-JavaScript">Prototype in JavaScript</a></p></li>
-	<li id="fn4"><p><a href="https://frontend.turing.edu/lessons/module-2/array-prototype-methods-iterators.html">Array Prototype Methods: Iterators</a></p></li>
-	<li id="fn5"><p><a href="https://www.digitalocean.com/community/tutorials/understanding-arrow-functions-in-javascript">Understanding Arrow Functions in JavaScript</a></p></li>
+	<li id="fn1"><p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a><a href="#fnref1">↩</a></p></li>
+	<li id="fn2"><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#using_prototypes_in_JavaScript">Inheritance and the prototype chain</a><a href="#fnref2">↩</a></p></li>
+	<li id="fn3"><p><a href="https://www.tutorialsteacher.com/JavaScript/prototype-in-JavaScript">Prototype in JavaScript</a><a href="#fnref3">↩</a></p></li>
+	<li id="fn4"><p><a href="https://frontend.turing.edu/lessons/module-2/array-prototype-methods-iterators.html">Array Prototype Methods: Iterators</a><a href="#fnref4">↩</a></p></li>
+	<li id="fn5"><p><a href="https://www.digitalocean.com/community/tutorials/understanding-arrow-functions-in-javascript">Understanding Arrow Functions in JavaScript</a><a href="#fnref5">↩</a></p></li>
 	</ol>
 	</div>
 
 </mat-expansion-panel>
+
 
 <mat-expansion-panel hideToggle class="ExpansionPanel">
     <mat-expansion-panel-header class="matPanelTitle">
@@ -169,12 +169,12 @@
     </mat-expansion-panel-header>
     		<p>Before to start explaining what is the recursion depth exceeeded error, we will define recursion. We could say that in programming recursion is the process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function.</p>
 	<h2 id="tail-recursive">Tail recursive</h2>
-	<p>In a typical recursive function, we usually make the recursive calls first <a class="footnoteRef" id="fnref1"><sup>1</sup></a>, and then take the return value of the recursive call to calculate the result. Therefore, we only get the final result after all the recursive calls have returned some value. But in a tail recursive function, the various calculations and statements are performed first and the recursive call to the function is made after that. By doing this, we pass the results of the current step to the next recursive call to the function. Hence, the last statement in a Tail recursive function is the recursive call to the function.</p>
-		<div class='images'><img src='assets/Week 12/2.png'></div>	<p>This means that when we perform the next recursive call to the function, the current stack frame (occupied by the current function call) is not needed anymore. This allows us to optimize the code. We Simply reuse the current stack frame for the next recursive step and repeat this process for all the other function calls <a class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
-	<p>In few words: <em>tail call optimization</em>, where you can make some function calls without growing the call stack <a class="footnoteRef" id="fnref3"><sup>3</sup></a>.</p>
+	<p>In a typical recursive function, we usually make the recursive calls first <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, and then take the return value of the recursive call to calculate the result. Therefore, we only get the final result after all the recursive calls have returned some value. But in a tail recursive function, the various calculations and statements are performed first and the recursive call to the function is made after that. By doing this, we pass the results of the current step to the next recursive call to the function. Hence, the last statement in a Tail recursive function is the recursive call to the function.</p>
+		<div class='images'><img src='assets/Week 12/2.png'></div>	<p>This means that when we perform the next recursive call to the function, the current stack frame (occupied by the current function call) is not needed anymore. This allows us to optimize the code. We Simply reuse the current stack frame for the next recursive step and repeat this process for all the other function calls <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+	<p>In few words: <em>tail call optimization</em>, where you can make some function calls without growing the call stack <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>.</p>
 	<h2 id="how-python-manages-calls">How Python manages calls?</h2>
-	<p>The Python interpreter uses a call stack <a class="footnoteRef" id="fnref4"><sup>4</sup></a> to run a Python program. When a function is called in Python, a new frame is pushed onto the call stack for its local execution, and every time a function call returns, its frame is popped off the call stack.</p>
-	<p>The module in which the program runs has the bottom-most frame which is called the global frame or the module frame. These frames keep the data that the function needs for its local execution which is the function arguments and its local variables <a class="footnoteRef" id="fnref5"><sup>5</sup></a>.</p>
+	<p>The Python interpreter uses a call stack <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> to run a Python program. When a function is called in Python, a new frame is pushed onto the call stack for its local execution, and every time a function call returns, its frame is popped off the call stack.</p>
+	<p>The module in which the program runs has the bottom-most frame which is called the global frame or the module frame. These frames keep the data that the function needs for its local execution which is the function arguments and its local variables <a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>.</p>
 	<p>Example/representation of a call stack frame in python</p>
 		<div class='images'><img src='assets/Week 12/3.png'></div>	<h2 id="recursion-depth-error-in-python">Recursion depth error in Python</h2>
 	<p>Something, I forgot to mention above about the call stack, is that it has a limited size. So by increasing the value of recursion, we finally reach the limit of the call stack, and cannot push any more frames on top of that. This is called a stack overflow, and it means that we run out of memory to hold the frames in the call stack. To avoid the stack overflow, Python sets a limit for the total number of frames that the call stack can hold. The default limit is 999 (the maximum number of frames that the call stack can hold). So when you reach that number of frames, Python says you that you already reached the limit through recursion depth exceeded error flag.</p>
@@ -233,11 +233,11 @@
 	<div class="footnotes">
 	<hr />
 	<ol>
-	<li id="fn1"><p>A recursive function is tail recursive when recursive call is the last thing executed by the function.</p></li>
-	<li id="fn2"><p><a href="https://www.geeksforgeeks.org/python-handling-recursion-limit/">Python | Handling recursion limit</a></p></li>
-	<li id="fn3"><p><a href="https://exploringjs.com/es6/ch_tail-calls.html">27. Tail call optimization</a></p></li>
-	<li id="fn4"><p>Stack is a data structure with a LIFO (Last In First Out) order which has two principal operations: push (adds an element to the stack), and pop (removes the most recently added element)</p></li>
-	<li id="fn5"><p><a href="https://towardsdatascience.com/python-stack-frames-and-tail-call-optimization-4d0ea55b0542">Python Stack Frames and Tail-Call Optimization</a></p></li>
+	<li id="fn1"><p>A recursive function is tail recursive when recursive call is the last thing executed by the function.<a href="#fnref1">↩</a></p></li>
+	<li id="fn2"><p><a href="https://www.geeksforgeeks.org/python-handling-recursion-limit/">Python | Handling recursion limit</a><a href="#fnref2">↩</a></p></li>
+	<li id="fn3"><p><a href="https://exploringjs.com/es6/ch_tail-calls.html">27. Tail call optimization</a><a href="#fnref3">↩</a></p></li>
+	<li id="fn4"><p>Stack is a data structure with a LIFO (Last In First Out) order which has two principal operations: push (adds an element to the stack), and pop (removes the most recently added element)<a href="#fnref4">↩</a></p></li>
+	<li id="fn5"><p><a href="https://towardsdatascience.com/python-stack-frames-and-tail-call-optimization-4d0ea55b0542">Python Stack Frames and Tail-Call Optimization</a><a href="#fnref5">↩</a></p></li>
 	</ol>
 	</div>
 </mat-expansion-panel>
