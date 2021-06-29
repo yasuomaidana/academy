@@ -1,0 +1,384 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Data Structures </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>A
+	<b>data
+	structure</b>
+	is a particular way of organizing data in a computer so that it can
+	be used effectively.</p>
+	<p>Array
+	Data Structure: An array is a collection of items stored at
+	<b>contiguous
+	memory locations.</b>
+	The idea is to store multiple items of the same type together. This
+	makes it easier to calculate the position of each element by simply
+	adding an offset to a base value, i.e., the memory location of the
+	first element of the array (generally denoted by the name of the
+	array).</p>
+	<p>Linked
+	List Data Structure<b>:
+	</b>A
+	linked list is a linear data structure, in which the elements are not
+	stored at contiguous memory locations. A linked list consists of
+	<b>nodes</b>
+	where each node <b>contains
+	a data field and a reference </b>(link)
+	to the next node in the list.</p>
+	<p>Stack
+	Data Structure: Stack is a linear data structure which follows a
+	particular order in which the operations are performed. The order may
+	be LIFO(Last In First Out) or FILO(First In Last Out).</p>
+	<p>Queue
+	Data Structure: A Queue is a linear structure which follows a
+	particular order in which the operations are performed. The order is
+	<a>stacks
+	</a>and queues is in removing. In a stack we remove the item the most
+	recently added; in a queue, we remove the item the least recently
+	added.</p>
+		<div class='images'><img src='assets/Week 13/1.png'></div>	<p>Binary
+	Tree Data Structure: A tree whose elements have at most 2 children is
+	called a binary tree. Since each element in a binary tree can have
+	only 2 children, we typically name them the left and right child.</p>
+	<p>A
+	Binary Tree node contains following parts.</p>
+	<ol>
+	<li><p>Data</p>
+	<li><p>Pointer
+		to left child</p>
+	<li><p>Pointer
+		to right child</p>
+	</ol>
+		<div class='images'><img src='assets/Week 13/2.png'></div>	<p><b>Binary
+	Search Tree</b>
+	is a node-based binary tree data structure which has the following
+	properties:</p>
+	<ul>
+	<li><p>The
+		left subtree of a node contains only nodes with keys lesser than the
+		node's key.</p>
+	<li><p>The
+		right subtree of a node contains only nodes with keys greater than
+		the node's key.</p>
+	<li><p>The
+		left and right subtree each must also be a binary search tree.</p>
+	</ul>
+		<div class='images'><img src='assets/Week 13/3.png'></div>	<p>Heap
+	Data Structure: A Heap is a special Tree-based data structure in
+	which the tree is a complete binary tree. Generally, Heaps can be of
+	two types:</p>
+	<ol>
+	<li><p><b>Max-Heap</b>:
+		In a Max-Heap the key present at the root node must be greatest
+		among the keys present at all of it's children. The same property
+		must be recursively true for all sub-trees in that Binary Tree.</p>
+	<li><p><b>Min-Heap</b>:
+		In a Min-Heap the key present at the root node must be minimum among
+		the keys present at all of it's children. The same property must
+		be recursively true for all sub-trees in that Binary Tree.</p>
+	</ol>
+		<div class='images'><img src='assets/Week 13/4.png'></div>	<p>Hashing
+	Data Structure: Hashing is a technique or process of mapping keys,
+	values into the hash table by using a hash function. It is done for
+	faster access to elements. The efficiency of mapping depends on the
+	efficiency of the hash function used.</p>
+	<p>Graph
+	Data Structure And Algorithms: A Graph is a non-linear data structure
+	consisting of nodes and edges. The nodes are sometimes also referred
+	to as vertices and the edges are lines or arcs that connect any two
+	nodes in the graph. More formally a Graph can be defined as, A Graph
+	<b>consists
+	of a finite set of vertices</b>(or
+	nodes) and <b>set
+	of Edges</b>
+	which <b>connect</b>
+	a pair of <b>nodes</b>.</p>
+	<p>Graph
+	can be classified on the basis of many things, below are the two most
+	common classifications :</p>
+	<ul>
+		<li><p><b>Direction	:</b></p>
+			<ul>
+				<li><p>Undirected Graph : The graph in which all the edges are bidirectional.</p></li>
+				<li><p>Directed Graph : The graph in which all the edges are unidirectional.</p></li>
+			</ul>
+		</li>
+		<li><p><b>Weight:</b></p>
+			<ul>
+				<li><p>Weighted	Graph : The Graph in which weight is associated with the edges.</p></li>
+				<li><p>Unweighted Graph : The Graph in which their is no weight	associated to the edges.</p></li>
+			</ul>
+		</li>
+	</ul>
+	<p>Matrix
+	Archives: A matrix represents a collection of numbers arranged in an
+	order of rows and columns. It is necessary to enclose the elements of
+	a matrix in parentheses or brackets.</p>
+	<p>Trie:
+	Trie is an efficient data structure for searching words in
+	dictionaries, search complexity with Trie is linear in terms of word
+	(or key) length to be searched. If we store keys in binary search
+	tree, a well balanced BST will need time proportional to M * log N,
+	where M is maximum string length and N is number of keys in tree.
+	Using trie, we can search the key in O(M) time.</p>
+	<p>Segment
+	Tree: This data structure is usually implemented when there are a lot
+	of queries on a set of values. These queries involve minimum,
+	maximum, sum, .. etc on a input range of given set. Queries also
+	involve updation of values in given set. 
+	</p>
+	<p>Suffix
+	Tree: Suffix Tree is mainly used to search a pattern in a text. The
+	idea is to preprocess the text so that search operation can be done
+	in time linear in terms of pattern length. The pattern searching
+	algorithms like KMP, Z, etc take time proportional to text length. 
+	</p>
+	<h2>ADT</h2>
+	<p>Abstract
+	Data Types: Abstract Data type (ADT) is a type (or class) for objects
+	whose behaviour is defined by a set of value and a set of operations.</p>
+	<p>The
+	definition of ADT only mentions what operations are to be performed
+	but not how these operations will be implemented. It does not specify
+	how data will be organized in memory and what algorithms will be used
+	for implementing the operations. It is called “abstract” because
+	it gives an implementation-independent view. The process of providing
+	only the essentials and hiding the details is known as abstraction.</p>
+	<p><a>https://www.geeksforgeeks.org/data-structures/</a></p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Control version </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>Version
+	control is a system that records changes to a file or set of files
+	over time so that you can recall specific versions later. 
+	</p>
+	<p>It
+	allows you to revert selected files back to a previous state, revert
+	the entire project back to a previous state, compare changes over
+	time, see who last modified something that might be causing a
+	problem, who introduced an issue and when, and more. Using a VCS also
+	generally means that if you screw things up or lose files, you can
+	easily recover. In addition, you get all this for very little
+	overhead.</p>
+	<p><b>Local
+	Version Control Systems</b></p>
+	<p>Programmers
+	long ago developed local VCSs that had a simple database that kept
+	all the changes to files under revision control.</p>
+	<p>One
+	of the most popular VCS tools was a system called RCS, which is still
+	<a>RCS</a>
+	works by keeping patch sets (that is, the differences between files)
+	in a special format on disk; it can then re-create what any file
+	looked like at any point in time by adding up all the patches.</p>
+	<p><b>Centralized
+	Version Control Systems</b></p>
+	<p>These
+	systems (such as CVS, Subversion, and Perforce) have a single server
+	that contains all the versioned files, and a number of clients that
+	check out files from that central place.</p>
+	<p>Advantages</p>
+	<ul>
+	<li><p>Everyone
+		knows to a certain degree what everyone else on the project is
+		doing. 
+		</p>
+	<li><p>Administrators
+		have fine-grained control over who can do what</p>
+	<li><p>It's
+		far easier to administer a CVCS than it is to deal with local
+		databases on every client.</p>
+	</ul>
+	<p>Disadvantage:
+	 Single point of failure that the centralized server represents</p>
+	<p><b>Distributed
+	Version Control Systems</b></p>
+	<p>Clients
+	don't just check out the latest snapshot of the files; rather, they
+	fully mirror the repository, including its full history.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Git </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>With
+	Git, every time you commit, or save the state of your project, Git
+	basically takes a picture of what all your files look like at that
+	moment and stores a reference to that snapshot. To be efficient, if
+	files have not changed, Git doesn't store the file again, just a
+	link to the previous identical file it has already stored. Git thinks
+	about its data more like a <b>stream
+	of snapshots</b>.</p>
+	<p>Most
+	operations in Git need only local files and resources to
+	operate — generally no information is needed from another
+	computer on your network.</p>
+	<h2>Goals (GIT)</h2>
+	<ul>
+	<li><p>Speed</p>
+	<li><p>Simple
+		design</p>
+	<li><p>Strong
+		support for non-linear development (thousands of parallel branches)</p>
+	<li><p>Fully
+		distributed</p>
+	<li><p>Able
+		to handle large projects like the Linux kernel efficiently (speed
+		and data size)</p>
+	</ul>
+	<p><br><br><br>
+	</p>
+	<h2>Git Integrity</h2>
+	<p>Everything
+	in Git is checksummed before it is stored and is then referred to by
+	that checksum. This means it's impossible to change the contents of
+	any file or directory without Git knowing about it. This
+	functionality is built into Git at the lowest levels and is integral
+	to its philosophy. You can't lose information in transit or get
+	file corruption without Git being able to detect it.</p>
+	<p>The
+	mechanism that Git uses for this checksumming is called a SHA-1 hash.
+	This is a 40-character string composed of hexadecimal characters (0–9
+	and a–f) and calculated based on the contents of a file or
+	directory structure in Git.</p>
+	<p><b>Git
+	Generally Only Adds Data</b></p>
+	<h2>The Three States</h2>
+	<ul>
+	<li><p>Modified
+		means that you have changed the file but have not committed it to
+		your database yet.</p>
+	<li><p>Staged
+		means that you have marked a modified file in its current version to
+		go into your next commit snapshot.</p>
+	<li><p>Committed
+		means that the data is safely stored in your local database.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Clean code </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p>Comments
+		should be reserved for technical notes about the code and design</p>
+	<li><p>Obsolete
+		comments tend to migrate away from the code they once described.
+		They become floating islands of irrelevance or misdirection.</p>
+	<li><p>A
+		comment is redundant if it describes something that adequately
+		describes itself. 
+		</p>
+	<li><p>A
+		comment worth writing is worth writing well. If you are going to
+		write a comment, take the time to make sure it is the best comment
+		you can write. 
+		</p>
+	<li><p>Avoid
+		Comment-Out Code: Refer to old functions, parameters or whatever
+		that is not use anymore.</p>
+	</ul>
+	<h2>Function</h2>
+	<ul>
+	<li><p>No
+		argument is best, followed by one, two, and three. More than three
+		is very questionable and should be avoided with prejudice.</p>
+	<li><p>Output
+		arguments are counterintuitive. Readers expect arguments to be
+		inputs, not outputs. If your function must change the state of
+		something, have it change the state of the object it is called on.</p>
+	<li><p>Boolean
+		arguments loudly declare that the function does more than one thing.
+		They are confusing and should be eliminated.</p>
+	<li><p>Methods
+		that are never called should be discarded.</p>
+	<li><p>Well-defined
+		modules have very small interfaces that allow you to do a lot with a
+		little. Poorly defined modules have wide and deep interfaces that
+		force you to use many different gestures to get simple things done.
+		A well-defined interface does not offer very many functions to
+		depend upon, so coupling is low. A poorly defined interface provides
+		lots of functions that you must call, so coupling is high.</p>
+	<li><p>Variables
+		and function should be defined close to where they are used. Local
+		variables should be declared just above their first usage and should
+		have a small vertical scope. We don't want local variables
+		declared hundreds of lines distant from their usages.</p>
+	<li><p>Be
+		careful with the conventions you choose, and once chosen, be careful
+		to continue to follow them.</p>
+	<li><p>We
+		want code to be as expressive as possible. Run-on expressions,
+		Hungarian notation, and magic numbers all obscure the author's
+		intent.</p>
+	<li><p>Before
+		you consider yourself to be done with a function, make sure you
+		<i>understand</i>
+		how it works. It is not good enough that it passes all the tests.
+		You must <i>know</i>1
+		that the solution is correct</p>
+	<li><p><a><b>G23:
+		Prefer Polymorphism to If/Else or Switch/Case</b></a><b>
+		</b>
+		</p>
+	<li><p><a><b>G24:
+		Follow Standard Conventions</b></a><b>
+		</b>
+		</p>
+	<li><p><b>G25:
+		Replace Magic Numbers with Named Constants</b></p>
+	<li><p><a><b>G28:
+		Encapsulate Conditionals</b></a><b>
+		</b>
+		</p>
+	<li><p><b>G29:
+		Avoid Negative Conditionals</b></p>
+	<li><p><u><b>G30:
+		Functions Should Do One Thing</b></u></p>
+	</ul>
+	<h2>JAVA</h2>
+	<ul>
+	<li><p><b>J1:
+		Avoid Long Import Lists by Using Wildcards</b></p>
+	<li><p><b>J3:
+		Constants versus Enums</b></p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Design Patterns </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>In
+	software engineering, a <b>design
+	pattern</b>
+	is a general repeatable solution to a commonly occurring problem in
+	software design. A design pattern isn't a finished design that can be
+	transformed directly into code.</p>
+	<p><br><br>
+	</p>
+
+</mat-expansion-panel>
