@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Month1Component } from './month1/month1.component';
 import { Month2Component } from './month2/month2.component';
+import { Month3Component } from './month3/month3.component';
 
 @Component({
   selector: 'app-monthly',
@@ -18,6 +19,11 @@ export class MothlyComponent implements OnInit {
       "name":"Month 2",
       "description":"From May 3rd to June 4th",
       "component":Month2Component
+    },
+    {
+      "name":"Month 3",
+      "description":"From June 7th to July 9th",
+      "component":Month3Component
     }
   ];
   constructor() { }
