@@ -557,7 +557,1187 @@
         <p> Some Java questions </p>
         </mat-panel-title>
     </mat-expansion-panel-header>
-    			<div class='images'><img src='assets/Week 17/5.png'></div>
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Explain public static voidmain(String args[]) in Java. </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>main()
+        in Java is the entry point for any Java program. It is always written
+        as <b>public
+        static void main(String[] args)</b>.</p>
+        <ul>
+        <li><p><b>public</b>:
+            Public is an access modifier, which is used to specify who can
+            access this method. Public means that this Method will be accessible
+            by any Class.</p>
+        <li><p><b>static</b>:
+            It is a keyword in java which identifies it is class-based. main()
+            is made static in Java so that it can be accessed without creating
+            the instance of a Class. In case, main is not made static then the
+            compiler will throw an error as <b>main</b>()
+            is called by the JVM before any objects are made and only static
+            methods can be directly invoked via the class. 
+            </p>
+        <li><p><b>void</b>:
+            It is the return type of the method. Void defines the method which
+            will not return any value.</p>
+        <li><p><b>main</b>:
+            It is the name of the method which is searched by JVM as a starting
+            point for an application with a particular signature only. It is the
+            method where the main execution occurs.</p>
+        <li><p><b>String
+            args[]</b>:
+            It is the parameter passed to the main method.</p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Why Java is not 100%Object-oriented? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Java
+        is not 100% Object-oriented because it makes use of eight primitive
+        data types such as boolean, byte, char, int, float, double, long,
+        short which are not objects.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are wrapper classes inJava? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Wrapper
+        classes convert the Java primitives into the reference types
+        (objects). Every primitive data type has a class dedicated to it.
+        These are known as wrapper classes because they “wrap” the
+        primitive data type into an object of that class. Refer to the below
+        image which displays different primitive type, wrapper class and
+        constructor argument.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are constructors in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>In
+        Java, constructor refers to a block of code which is used to
+        <i><b>initialize
+        an object</b></i>.
+        It must have the <i><b>same
+        name as</b></i>
+        that of the <i><b>class</b></i>.
+        Also, it has no return type and it is automatically called when an
+        object is created.</p>
+        <p>There
+        are two types of constructors:</p>
+        <ol>
+        <li><p><b>Default
+            Constructor:</b>
+            In Java, a default constructor is the one which does not take any
+            inputs. In other words, default constructors are the no argument
+            constructors which <i><b>will
+            be created by default in case you no other constructor is defined</b></i>
+            by the user. Its main purpose is to initialize the instance
+            variables with the default values. Also, it is majorly used for
+            object creation. 
+            </p>
+        <li><p><b>Parameterized
+            Constructor</b></p>
+        </ol>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is singleton class inJava and how can we make a class singleton? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Singleton
+        class is a class whose only one instance can be created at any given
+        time, in one JVM. A class can be made singleton by making its
+        constructor private.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is the difference betweenequals() and == in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p><a href="https://www.geeksforgeeks.org/difference-equals-method-java/"><b>Link
+        1</b></a></p>
+        <p>In
+        general, both equals() and “==” operator in Java are used to
+        compare objects to check equality but here are some of the
+        differences between the two: 
+        </p>
+        <ul>
+        <li><p>The
+            main difference between the .equals() method and == operator is that
+            one is a method and the other is the operator.</p>
+        <li><p>We
+            can use == operators for reference comparison (<b>address
+            comparison</b>)
+            and .equals() method for <b>content
+            comparison</b>.
+            In simple words, == checks if both objects point to the same memory
+            location whereas .equals() evaluates to the comparison of values in
+            the objects.</p>
+        <li><p>If
+            a class does not <a href="https://www.geeksforgeeks.org/overriding-equals-method-in-java/">override
+            the equals method</a>,
+            then by default it uses the equals(Object o) method of the closest
+            parent class that has overridden this method. See <a href="https://www.geeksforgeeks.org/override-equalsobject-hashcode-method/">this
+            </a>for
+            detail</p>
+        <li><p>==”
+            or equality operator in Java is a binary operator provided by Java
+            programming language and used to compare primitives and objects.
+            public boolean equals(Object o) is the method provided by the Object
+            class. 
+            </p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Is Java Pass-by-value? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <ul>
+        <li><p>Pass
+            by value: makes a copy in memory of the parameter’s value, or a
+            copy of the contents of the parameter.</p>
+        <li><p>Pass
+            by reference: a copy of the address (or reference) to the parameter
+            is stored rather than the value itself. In this case, modifying the
+            value of the parameter will change the value. 
+            </p>
+        </ul>
+        <p>Java
+        is always <b>pass-by-value</b>.
+        Unfortunately, when we deal with objects we are really dealing with
+        object-handles called <i>references</i>
+        which are passed-by-value as well.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are the differencesbetween Heap and Stack Memory in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <table>
+        <col>
+        <col>
+        <col>
+        <tr>
+        <td>
+        <p><b>Features</b></p>
+                </td>
+        <td>
+        <p><b>Stack</b></p>
+                </td>
+        <td>
+        <p><b>Heap</b></p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p><b>Memory</b></p>
+                </td>
+        <td>
+        <p>Stack
+                    memory is used only by one thread of execution.</p>
+                </td>
+        <td>
+        <p>Heap
+                    memory is used by all the parts of the application.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p><b>Access</b></p>
+                </td>
+        <td>
+        <p>Stack
+                    memory can’t be accessed by other threads.</p>
+                </td>
+        <td>
+        <p>Objects
+                    stored in the heap are globally accessible.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p><b>Memory
+                    Management</b></p>
+                </td>
+        <td>
+        <p>Follows
+                    LIFO manner to free memory.</p>
+                </td>
+        <td>
+        <p>Memory
+                    management is based on the generation associated with each object.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p><b>Lifetime</b></p>
+                </td>
+        <td>
+        <p>Exists
+                    until the end of execution of the thread.</p>
+                </td>
+        <td>
+        <p>Heap
+                    memory lives from the start till the end of application execution.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p><b>Usage</b></p>
+                </td>
+        <td>
+        <p>Stack
+                    memory only contains local primitive and reference variables to
+                    objects in heap space.</p>
+                </td>
+        <td>
+        <p>Whenever
+                    an object is created, it’s always stored in the Heap space.</p>
+                </td>
+            </tr>
+        </table>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Whatis a package in Java?  List down various advantages of packages. </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Packages
+        in Java, are the <b>collection
+        of related classes and interfaces</b>
+        which are bundled together. By using packages, developers can easily
+        <b>modularize
+        the code</b>
+        and <b>optimize
+        its reuse</b>.
+        Also, the code within the packages can be imported by other classes
+        and reused. 
+        </p>
+        <p>Advantages:</p>
+        <ul>
+        <li><p>Packages
+            help in <b>avoiding
+            name clashes</b></p>
+        <li><p>They
+            provide <b>easier
+            access</b>
+            control on the code</p>
+        <li><p>Packages
+            can also contain <b>hidden
+            classes</b>
+            which are not visible to the outer classes and only used within the
+            package</p>
+        <li><p><b>Creates</b>
+            a proper <b>hierarchical
+            structure</b>
+            which makes it easier to locate the related classes</p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Why pointers are not used inJava? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Java
+        doesn’t use pointers because they are unsafe and increases the
+        complexity of the program.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are access modifiers inJava? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>In
+        Java, access modifiers are special keywords which are used to
+        restrict the access of a class, constructor, data member and method
+        in another class. Java supports four types of access modifiers:</p>
+        <ol>
+        <li><p>Default</p>
+        <li><p>Private</p>
+        <li><p>Protected</p>
+        <li><p>Public</p>
+        </ol>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Define a  Class. </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>A
+        class is a blueprint which includes all your data.  A class contains
+        fields (variables) and methods to describe the behavior of an object.
+        </p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is an object? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>An
+        object is a real-world entity that has a state and behavior. An
+        object has three characteristics:</p>
+        <ol>
+        <li><p>State</p>
+        <li><p>Behavior</p>
+        <li><p>Identity</p>
+        </ol>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is Object OrientedProgramming? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Object-oriented
+        programming or popularly known as OOPs is a programming model or
+        approach where the programs are organized around objects rather than
+        logic and functions. In other words, OOP mainly focuses on the
+        objects that are required to be manipulated instead of logic. This
+        approach is ideal for the programs large and complex codes and needs
+        to be actively updated or maintained.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are the main concepts ofOOPs in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Object-Oriented
+        Programming or OOPs is a programming style that is associated with
+        concepts like:</p>
+        <ol>
+        <li><p>Inheritance:
+            Inheritance is a process where one class acquires the properties of
+            another.</p>
+        <li><p>Encapsulation:
+            Encapsulation in Java is a mechanism of wrapping up the data and
+            code together as a single unit.</p>
+        <li><p>Abstraction:
+            Abstraction is the methodology of hiding the implementation details
+            from the user and only providing the functionality to the users. 
+            </p>
+        <li><p>Polymorphism:
+            Polymorphism is the ability of a variable, function or object to
+            take multiple forms.</p>
+        </ol>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is the difference betweena local variable and an instance variable? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <ul>
+        <li><p>A
+            <b>local
+            variable</b>
+            is typically used inside a method, constructor, or a <b>block</b>
+            and has only local scope. 
+            </p>
+        <li><p>An
+            <b>instance
+            variable</b>
+            in Java, is a variable which is bounded to its object itself. 
+            </p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Differentiate between theconstructors and methods in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <table>
+        <col>
+        <col>
+        <tr>
+        <td>
+        <p><b>Methods</b></p>
+                </td>
+        <td>
+        <p><b>Constructors</b></p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>1.
+                    Used to represent the behavior of an object</p>
+                </td>
+        <td>
+        <p>1.
+                    Used to initialize the state of an object</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>2.
+                    Must have a return type</p>
+                </td>
+        <td>
+        <p>2.
+                    Do not have any return type</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>3.
+                    Needs to be invoked explicitly</p>
+                </td>
+        <td>
+        <p>3.
+                    Is invoked implicitly</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>4.
+                    No default method is provided by the compiler</p>
+                </td>
+        <td>
+        <p>4.
+                    A default constructor is provided by the compiler if the class has
+                    none</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>5.
+                    Method name may or may not be same as class name</p>
+                </td>
+        <td>
+        <p>5.
+                    Constructor name must always be the same as the class name</p>
+                </td>
+            </tr>
+        </table>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is final keyword in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p><b>final
+        </b>is
+        a special keyword in Java that is used as a non-access modifier. A
+        final variable can be used in different contexts such as:</p>
+        <ul>
+        <li><p><b>final
+            variable: </b>Its
+            value can’t be changed once assigned. In case the no value has
+            been assigned to the final variable then using only the class
+            constructor a value can be assigned to it.</p>
+        <li><p><b>final
+            method</b>:
+            It can’t be overridden by the inheriting class.</p>
+        <li><p><b>final
+            class</b>:
+            It can’t be extended by any subclass class but it can extend other
+            class.</p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is Java String Pool? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Java
+        String pool refers to a collection of Strings which are stored in
+        heap memory. In this, whenever a new object is created, String pool
+        first checks whether the object is already present in the pool or
+        not. If it is present, then the same reference is returned to the
+        variable else new object will be created in the String pool and the
+        respective reference will be returned.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Differentiate between staticand non-static methods in Java. </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <table>
+        <col>
+        <col>
+        <tr>
+        <td>
+        <p><b>Static
+                    Method</b></p>
+                </td>
+        <td>
+        <p><b>Non-Static
+                    Method</b></p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>1.
+                    The static keyword must be used before the method name</p>
+                </td>
+        <td>
+        <p>1.
+                    No need to use the static keyword before the method name</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>2.
+                    It is called using the class (className.methodName)</p>
+                </td>
+        <td>
+        <p>2.
+                    It is can be called like any general method</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>3.
+                    They can’t access any non-static instance variables or methods</p>
+                </td>
+        <td>
+        <p>3.
+                    It can access any static method and any static variable without
+                    creating an instance of the class</p>
+                </td>
+            </tr>
+        </table>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Why Java Strings are immutablein nature? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>In
+        Java, string objects are immutable in nature which simply means once
+        the String object is created its state cannot be modified. Whenever
+        you try to update the value of that object instead of updating the
+        values of that particular object, Java creates a new string object.
+        Java String objects are immutable as String objects are generally
+        cached in the String pool. Since String literals are usually shared
+        between multiple clients, action from one client might affect the
+        rest. It enhances security, caching, synchronization, and performance
+        of the application. 
+        </p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is the difference betweenan array and an array list? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <table>
+        <col>
+        <col>
+        <tr>
+        <td>
+        <p><b>Array</b></p>
+                </td>
+        <td>
+        <p><b>ArrayList</b></p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Cannot
+                    contain values of different data types</p>
+                </td>
+        <td>
+        <p>Can
+                    contain values of different data types.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Size
+                    must be defined at the time of declaration</p>
+                </td>
+        <td>
+        <p>Size
+                    can be dynamically changed</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Need
+                    to specify the index in order to add data</p>
+                </td>
+        <td>
+        <p>No
+                    need to specify the index</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Arrays
+                    are not type parameterized</p>
+                </td>
+        <td>
+        <p>Arraylists
+                    are type</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Arrays
+                    can contain primitive data types as well as objects</p>
+                </td>
+        <td>
+        <p>Arraylists
+                    can contain only objects, no primitive data types are allowed</p>
+                </td>
+            </tr>
+        </table>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is a Map in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>In
+        Java, Map is an interface of Util package which maps unique keys to
+        values. The Map interface is not a subset of the main Collection
+        interface and thus it behaves little different from the other
+        collection types. Below are a few of the characteristics of Map
+        interface: 
+        </p>
+        <ol>
+        <li><p>Map
+            doesn’t contain duplicate keys.</p>
+        <li><p>Each
+            key can map at max one value.</p>
+        </ol>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is collection class inJava? List down its methods and interfaces. </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>In
+        Java, the collection is a framework that acts as an architecture for
+        storing and manipulating a group of objects. Using Collections you
+        can perform various tasks like searching, sorting, insertion,
+        manipulation, deletion, etc. 
+        </p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is Polymorphism? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Polymorphism
+        is a characteristic of being able to assign a different meaning or
+        usage to something in different contexts – specifically, to allow
+        an entity such as a variable, a function, or an object to have more
+        than one form.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is abstraction? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Abstraction
+        refers to the quality of dealing with ideas rather than events. It
+        basically deals with hiding the details and showing the essential
+        things to the user. <br>What
+        is method overloading and method overriding?</p>
+        <h2>Method Overloading :</h2>
+        <ul>
+        <li><p>In
+            Method Overloading, Methods of the same class shares the same name
+            but each method must have a different number of parameters or
+            parameters having different types and order.</p>
+        <li><p>Method
+            Overloading is to “add” or “extend” more to the method’s
+            behavior.</p>
+        <li><p>It
+            is a compile-time polymorphism.</p>
+        <li><p>The
+            methods must have a different signature.</p>
+        <li><p>It
+            may or may not need inheritance in Method Overloading.</p>
+        </ul>
+        <h2>Method Overriding:  
+        </h2>
+        <ul>
+        <li><p>In
+            Method Overriding, the subclass has the same method with the same
+            name and exactly the same number and type of parameters and same
+            return type as a superclass.</p>
+        <li><p>Method
+            Overriding is to “Change” existing behavior of the method.</p>
+        <li><p>It
+            is a run time polymorphism.</p>
+        <li><p>The
+            methods must have the same signature.</p>
+        <li><p>It
+            always requires inheritance in Method Overriding.</p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> Can you override a private orstatic method in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>You
+        cannot override a private or static method in Java. If you create a
+        similar method with the same return type and same method arguments in
+        child class then it will hide the superclass method; this is known as
+        method hiding. Similarly, you cannot override a private method in
+        subclass because it’s not accessible there. What you can do is
+        create another private method with the same name in the child class.
+        Let’s take a look at the example below to understand it better.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is an association? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Association
+        is a relationship where all object have their own lifecycle and there
+        is no owner.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is composition in Java? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Composition
+        is again a specialized form of Aggregation and we can call this as a
+        “death” relationship.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is a marker interface? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>A
+        Marker interface can be defined as the interface having no data
+        member and member functions.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is object cloning inJava? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Object
+        cloning in Java is the process of creating an exact copy of an
+        object. It basically means the ability to create an object with a
+        similar state as the original object. 
+        </p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is a copy constructor inJava? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>Copy
+        constructor is a member function that is used to initialize an object
+        using another object of the same class.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are the differencesbetween Get and Post methods? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <table>
+        <col>
+        <col>
+        <tr>
+        <td>
+        <p><b>Get</b></p>
+                </td>
+        <td>
+        <p><b>Post</b></p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Limited
+                    amount of data can be sent because data is sent in header.</p>
+                </td>
+        <td>
+        <p>Large
+                    amount of data can be sent because data is sent in body.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Not
+                    Secured because data is exposed in URL bar.</p>
+                </td>
+        <td>
+        <p>Secured
+                    because data is not exposed in URL bar.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Can
+                    be bookmarked</p>
+                </td>
+        <td>
+        <p>Cannot
+                    be bookmarked</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Idempotent</p>
+                </td>
+        <td>
+        <p>Non-Idempotent</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>It
+                    is more efficient and used than Post</p>
+                </td>
+        <td>
+        <p>It
+                    is less efficient and used</p>
+                </td>
+            </tr>
+        </table>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is the difference betweenError and Exception? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>An
+        error is an irrecoverable condition occurring at runtime. Such as
+        OutOfMemory error. These JVM errors you cannot repair them at
+        runtime. Though error can be caught in the catch block but the
+        execution of application will come to a halt and is not recoverable.</p>
+        <p>While
+        exceptions are conditions that occur because of bad input or human
+        error etc. e.g. FileNotFoundException will be thrown if the specified
+        file does not exist. Or a NullPointerException will take place if you
+        try using a null reference. In most of the cases it is possible to
+        recover from an exception (probably by giving the user feedback for
+        entering proper values etc.</p>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> How can you handle Javaexceptions? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>There
+        are five keywords used to handle exceptions in Java: 
+        </p>
+        <ol>
+        <li><p>try</p>
+        <li><p>catch</p>
+        <li><p>finally</p>
+        <li><p>throw</p>
+        <li><p>throws</p>
+        </ol>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What purpose do the keywordsfinal, finally, and finalize fulfill? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <ul>
+        <li><p><b>Final:</b>
+            Final is used to apply restrictions on class, method, and variable.
+            A final class can’t be inherited, final method can’t be
+            overridden and final variable value can’t be changed.</p>
+        <li><p><b>Finally</b>:
+            Finally is used to place important code, it will be executed whether
+            the exception is handled or not. 
+            </p>
+        <li><p><b>Finalize:
+            </b>Finalize
+            is used to perform clean up processing just before the object is
+            garbage collected.</p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are the differencesbetween throw and throws? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <table>
+        <col>
+        <col>
+        <tr>
+        <td>
+        <p><b>throw
+                    keyword</b></p>
+                </td>
+        <td>
+        <p><b>throws
+                    keyword</b></p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Throw
+                    is used to explicitly throw an exception.</p>
+                </td>
+        <td>
+        <p>Throws
+                    is used to declare an exception.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Checked
+                    exceptions can not be propagated with throw only.</p>
+                </td>
+        <td>
+        <p>Checked
+                    exception can be propagated with throws.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Throw
+                    is followed by an instance.</p>
+                </td>
+        <td>
+        <p>Throws
+                    is followed by class.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>Throw
+                    is used within the method.</p>
+                </td>
+        <td>
+        <p>Throws
+                    is used with the method signature.</p>
+                </td>
+            </tr>
+        <tr>
+        <td>
+        <p>You
+                    cannot throw multiple exception</p>
+                </td>
+        <td>
+        <p>You
+                    can declare multiple exception e.g. public void method()throws
+                    IOException,SQLException.</p>
+                </td>
+            </tr>
+        </table>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is exception hierarchy injava? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class='images'><img src='assets/Week 17/5.png'></div>
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What is synchronization? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <ul>
+        <li><p>Synchronization
+            refers to multi-threading. A synchronized block of code can be
+            executed by only one thread at a time. 
+            </p>
+        <li><p>As
+            Java supports execution of multiple threads, two or more threads may
+            access the same fields or objects. 
+            </p>
+        <li><p>Synchronization
+            is a process which keeps all concurrent threads in execution to be
+            in sync. 
+            </p>
+        <li><p>Synchronization
+            avoids memory consistency errors caused due to inconsistent view of
+            shared memory. 
+            </p>
+        <li><p>When
+            a method is declared as synchronized the thread holds the monitor
+            for that method’s object. 
+            </p>
+        <li><p>If
+            another thread is executing the synchronized method the thread is
+            blocked until that thread releases the monitor. 
+            </p>
+        </ul>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel hideToggle class="ExpansionPanel">
+        <mat-expansion-panel-header class="matPanelTitle">
+        <mat-panel-title>
+            <p> What are the two ways tocreate a thread? </p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+                <p>In
+        Java, threads can be created in the following two ways:- 
+        </p>
+        <ul>
+        <li><p>By
+            implementing the Runnable interface.</p>
+        <li><p>By
+            extending the Thread</p>
+        </ul>
+        <p><br><br>
+        </p>
+    
+    </mat-expansion-panel>
+    			
 </mat-expansion-panel>
 
 
