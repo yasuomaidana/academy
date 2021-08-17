@@ -1,0 +1,1054 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Java - Basic Operators -Tutorialspoint </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://www.tutorialspoint.com/java/java_basic_operators.htm">Link</a></p>
+	<p>Conditional
+	Operator ( ? : )</p>
+	<p>Conditional
+	operator is also known as the <b>ternary
+	operator</b>.
+	This operator consists of three operands and is used to evaluate
+	Boolean expressions. The goal of the operator is to decide, which
+	value should be assigned to the variable. The operator is written as
+	−</p>
+	<p>variable
+	x = (expression) ? value if true : value if false</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Lambda expressions in JAVA </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">
+	Link
+	1</a></p>
+	<p><a href="https://dzone.com/articles/java-8-lambda-functions-usage-examples">Link
+	2</a></p>
+	<p>The
+	introduction of lambdas required coordinated changes in the language,
+	library, and the VM implementation:</p>
+	<ul>
+	<li><p>The
+		arrow operator (“-&gt;”) for defining lambda functions, the
+		double colon operator (“::”) used for method references, and the
+		default keyword.</p>
+	<li><p>The
+		streams library and the integration of the collections library with
+		streams.</p>
+	<li><p>Lambda
+		functions are implemented using the invokedynamic instruction
+		introduced in Java 7.</p>
+	</ul>
+	<p>In
+	Java 8, java.util has been considerably enhanced using lambda
+	functions. Java 8 has added two new packages: java.util.function and
+	java.util.streams. 
+	</p>
+	<p>To
+	support the introduction of lambdas into the language, the type
+	inference has also been strengthened in Java 8. Lambdas enabled
+	library writers to create parallel algorithms in the library to
+	exploit inherent parallelism in the modern hardware.</p>
+	<p>Lambdas
+	support the functional programming paradigm</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Lambda Functions: Syntax </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>A
+	lambda function consists of optional parameters, the arrow token, and
+	the body:</p>
+	<p><i>LambdaParameters
+	-&gt; LambdaBody</i></p>
+	<ul>
+	<li><p>LambdaParameters
+		are parameters to the lambda function passed within opening
+		parenthesis &quot;(&quot; and closing parenthesis &quot;)&quot;.
+		When more than one parameter is passed, they are separated by
+		commas.</p>
+	<li><p>To
+		support lambdas, Java has introduced a new operator “-&gt;”,
+		also known as lambda operator or arrow operator. This arrow operator
+		is required because we need to syntactically separate the parameter
+		from the body. 
+		</p>
+	<li><p>LambdaBody
+		can be an expression or a block. The body could consist of single
+		statement (in that case no explicit curly braces defining a block
+		are required); such a lambda body is known as  an &quot;expression
+		lambda.&quot; If there are many statements in a lambda body, they
+		need to be in a block of code; such a lambda body is known as &quot;block
+		lambda.&quot;</p>
+	</ul>
+	<p>The
+	compiler performs type inference for lambda expressions:</p>
+	<ul>
+	<li><p>The
+		compiler infers the types of the parameters if you do not specify
+		the parameter types in a lambda function definition. When you
+		specify the type of parameters, you need to either specify all or
+		none, or else you will get a compiler error.</p>
+	<li><p>You
+		can omit the parenthesis if there is only one parameter. But in this
+		case, you cannot provide the type explicitly. You should leave it to
+		the compiler to infer the type of that single parameter.</p>
+	<li><p>The
+		return type of the lambda function is inferred from the body. If any
+		of the code in the lambda returns a value, then all the paths should
+		return a value, or else you will get a compiler error.</p>
+	</ul>
+	<h2>Generic Functional Interfaces</h2>
+	<p>A
+	lambda expression cannot be generic. But the functional interface
+	associated with a lambda expression can. It is possible to write one
+	generic interface and handle different return types.</p>
+	<h2>Lambda Expressions as
+	arguments</h2>
+	<p>One
+	common use of lambdas is to pass them as arguments.</p>
+	<p>They
+	can be used in any piece of code that provides a target type. 
+	</p>
+	<p>To
+	pass lambda expressions as parameters, just make sure the functional
+	interface type is compatible with the required parameter.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Functional Interfaces In Java </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://www.geeksforgeeks.org/functional-interfaces-java/">Link
+	1</a></p>
+	<p>A
+	functional interface is an interface that contains only one abstract
+	method. They can have only one functionality to exhibit.</p>
+	<h2>@FunctionalInterface
+	Annotation</h2>
+	<p>@FunctionalInterface
+	annotation is used to ensure that the functional interface can’t
+	have more than one abstract method. In case more than one abstract
+	methods are present, the compiler flags an ‘Unexpected
+	@FunctionalInterface annotation’ message. However, it is not
+	mandatory to use this annotation.</p>
+		<div class='images'><img src='assets/Week 18/1.png'></div>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> java.util.function Package: </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>The
+	java.util.function package in Java 8 contains many builtin functional
+	interfaces like-</p>
+	<ul>
+	<li><p><b>Predicate:
+		</b>The
+		Predicate interface has an abstract method test which gives a
+		Boolean value as a result for the specified argument. Its prototype
+		ispublic interface Predicate</p>
+	<li><p><b>BinaryOperator:</b>
+		The BinaryOperator interface has an abstract method apply which
+		takes two argument and returns a result of same type. Its prototype
+		ispublic interface BinaryOperator 
+		</p>
+	<li><p><b>Function:</b>
+		The Function interface has an abstract method apply which takes
+		argument of type T and returns a result of type R. Its prototype
+		ispublic interface Function 
+		</p>
+	</ul>
+		<div class='images'><img src='assets/Week 18/2.png'></div>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Interface Map&lt;K,V&gt; </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><b>Link
+	1</b></a></p>
+	<p><b>Interface
+	Map&lt;K,V&gt;</b></p>
+	<ul>
+	<li><p><b>Type
+		Parameters:</b><br><b>
+		</b>K
+		- the type of keys maintained by this map<br>
+		V - the type of mapped values</p>
+	</ul>
+	<p>An
+	object that maps keys to values. A map cannot contain duplicate keys;
+	each key can map to at most one value.</p>
+	<p>The
+	Map interface <b>provides
+	three </b><i><b>collection
+	views</b></i>,
+	which allow a map's contents to be viewed as:</p>
+	<ul>
+	<li><p>a
+		set of keys, 
+		</p>
+	<li><p>collection
+		of values, 
+		</p>
+	<li><p>or
+		set of key-value mappings. 
+		</p>
+	</ul>
+	<p>The
+	<i>order</i>
+	of a map is defined as the order in which the iterators on the map's
+	collection views return their elements. 
+	</p>
+	<ul>
+	<ul>
+	<li><p><b>Some
+			map</b>
+			implementations, like the TreeMap class, <b>make
+			specific guarantees as to their order</b>;
+			</p>
+		</ul>
+	</ul>
+	<h2>NOTES</h2>
+	<ul>
+	<li><p>Great
+		care must be exercised if <b>mutable
+		objects</b>
+		are <b>used
+		as map keys</b>.
+		</p>
+	<li><p>The
+		behavior of a map is not specified if the value of an object is
+		changed in a manner that affects equals comparisons while the object
+		is a key in the map. 
+		</p>
+	<li><p>A
+		special case of this prohibition is that <b>it
+		is not permissible for a map to contain itself as a key</b>.
+		</p>
+	<li><p><b>It
+		is permissible for a map to contain itself as a value</b>,
+		extreme caution is advised: the equals and hashCode methods are no
+		longer well defined on such a map.</p>
+	</ul>
+	<h2>Constructors</h2>
+	<p>All
+	general-purpose map implementation classes should provide two
+	&quot;standard&quot; constructors: 
+	</p>
+	<ul>
+	<li><p>A
+		void (no arguments) constructor which creates an empty map</p>
+	<li><p>A
+		constructor with a single argument of type Map, which creates a new
+		map with the <b>same
+		key-value mappings </b>as
+		its argument. 
+		</p>
+	<ul>
+	<li><p>It
+			allows the user to copy any map, producing an equivalent map of the
+			desired class. 
+			</p>
+		</ul>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Double colon (::) operator inJava </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://www.geeksforgeeks.org/double-colon-operator-in-java/"><b>Link
+	1</b></a></p>
+	<p>The
+	<b>double
+	colon (::) operator</b>,
+	also known as <b>method
+	reference operator</b>
+	in Java, is used to call a method by referring to it with the help of
+	its class directly. They behave exactly as the lambda expressions.
+	The only difference it has from lambda expressions is that this uses
+	direct reference to the method by name instead of providing a
+	delegate to the method.</p>
+	<p>Example
+	</p>
+	<ul>
+	<li><p>Using
+		Lambda expression: <b>stream.forEach(
+		s-&gt; System.out.println(s));</b></p>
+	<li><p>Using
+		double colon operator: <b>stream.forEach(
+		System.out::println(s));</b></p>
+	</ul>
+	<h2>When to use double colon
+	operator?</h2>
+	<p>Method
+	reference or double colon operator can be used to refer:</p>
+	<ul>
+	<li><p>a
+		static method,</p>
+	<li><p>an
+		instance method, or</p>
+	<li><p>a
+		constructor.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Package java.util.streamDescription </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html"><b>Link
+	1</b></a></p>
+	<p>Classes
+	to support functional-style operations on streams of elements, such
+	as map-reduce transformations on collections.</p>
+	<h2>Streams and Collections
+	differences</h2>
+	<ul>
+	<li><p>No
+		storage. A stream is not a data structure that stores elements;
+		instead, it conveys elements from a source such as a data structure,
+		an array, a generator function, or an I/O channel, through a
+		pipeline of computational operations.</p>
+	<li><p>Functional
+		in nature. An operation on a stream produces a result, but does not
+		modify its source. For example, filtering a Stream obtained from a
+		collection produces a new Stream without the filtered elements,
+		rather than removing elements from the source collection.</p>
+	<li><p>Laziness-seeking.
+		Many stream operations, such as filtering, mapping, or duplicate
+		removal, can be implemented lazily, exposing opportunities for
+		optimization. For example, &quot;find the first String with three
+		consecutive vowels&quot; need not examine all the input strings. 
+		</p>
+	<ul>
+	<li><p>Stream
+			operations are divided into:</p>
+	<ul>
+	<li><p>Intermediate
+				(Stream-producing) operations, which are always lazy.</p>
+	<li><p>Terminal
+				(value- or side-effect-producing) operations.</p>
+			</ul>
+		</ul>
+	<li><p>Possibly
+		unbounded. While collections have a finite size, streams need not.
+		Short-circuiting operations such as limit(n) or findFirst() can
+		allow computations on infinite streams to complete in finite time.</p>
+	<li><p>Consumable.
+		The elements of a stream are only visited once during the life of a
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html">Iterator</a>,
+		a new stream must be generated to revisit the same elements of the
+		source.</p>
+	</ul>
+	<h2>Obtaining streams</h2>
+	<ul>
+	<li><p>From
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html">Collection</a>
+		via the stream() and parallelStream() methods;</p>
+	<li><p>From
+		an array via <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#stream-T:A-">Arrays.stream(Object[])</a>;</p>
+	<li><p>From
+		static factory methods on the stream classes, such as
+		<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#of-T...-">Stream.of(Object[])</a>,
+		<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#range-int-int-">IntStream.range(int,
+		int)</a>
+		or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#iterate-T-java.util.function.UnaryOperator-">Stream.iterate(Object,
+		UnaryOperator)</a>;</p>
+	<li><p>The
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#lines--">BufferedReader.lines()</a>;</p>
+	<li><p>Streams
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html">Files</a>;</p>
+	<li><p>Streams
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#ints--">Random.ints()</a>;</p>
+	<li><p>Numerous
+		other stream-bearing methods in the JDK, including <a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html#stream--">BitSet.stream()</a>,
+		<a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#splitAsStream-java.lang.CharSequence-">Pattern.splitAsStream(java.lang.CharSequence)</a>,
+		and <a href="https://docs.oracle.com/javase/8/docs/api/java/util/jar/JarFile.html#stream--">JarFile.stream()</a>.</p>
+	</ul>
+	<p>Additional
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#StreamSources">these
+	techniques</a>.</p>
+	<h2>Stream operations and
+	pipelines</h2>
+	<p>Stream
+	operations are divided into <i>intermediate</i>
+	and <i>terminal</i>
+	operations, and are combined to form <i>stream
+	pipelines</i>.
+	</p>
+	<p>A
+	stream pipeline consists of:</p>
+	<ul>
+	<li><p>a
+		source (such as a Collection, an array, a generator function, or an
+		I/O channel); 
+		</p>
+	<li><p>followed
+		by zero or more intermediate operations such as Stream.filter or
+		Stream.map; 
+		</p>
+	<li><p>and
+		a terminal operation such as Stream.forEach or Stream.reduce.</p>
+	</ul>
+	<h2>Intermediate operations</h2>
+	<ul>
+	<li><p>They
+		return a new stream. 
+		</p>
+	<li><p>They
+		are always <i>lazy</i>;
+		executing an intermediate operation such as filter() does not
+		actually perform any filtering, but instead creates a new stream
+		that, when traversed, contains the elements of the initial stream
+		that match the given predicate. 
+		</p>
+	<li><p>Traversal
+		of the pipeline source does not begin until the terminal operation
+		of the pipeline is executed.</p>
+	</ul>
+	<p>Processing
+	streams lazily allows for significant efficiencies. Laziness also
+	allows avoiding examining all the data when it is not necessary.
+	(This behavior becomes even more important when the input stream is
+	infinite and not merely large.)</p>
+	<p>Intermediate
+	operations are further divided into <i>stateless</i>
+	and <i>stateful</i>
+	operations. 
+	</p>
+	<ul>
+	<li><p><b>Stateless
+		operations</b>,
+		such as filter and map, <b>retain
+		no state from previously seen element</b>
+		when processing a new element -- each element can be processed
+		independently of operations on other elements. 
+		</p>
+	<li><p>Stateful
+		operations, such as distinct and sorted, may incorporate state from
+		previously seen elements when processing new elements.</p>
+	<ul>
+	<li><p>Stateful
+			operations may need to process the entire input before producing a
+			result. As a result, under parallel computation, some pipelines
+			containing stateful intermediate operations may require multiple
+			passes on the data or may need to buffer significant data.
+			Pipelines containing exclusively stateless intermediate operations
+			can be processed in a single pass, whether sequential or parallel,
+			with minimal data buffering.</p>
+		</ul>
+	</ul>
+	<p>Further,
+	some operations are deemed <i>short-circuiting</i>
+	operations. An intermediate operation is short-circuiting if, when
+	presented with infinite input, it may produce a finite stream as a
+	result. A terminal operation is short-circuiting if, when presented
+	with infinite input, it may terminate in finite time. Having a
+	short-circuiting operation in the pipeline is a necessary, but not
+	sufficient, condition for the processing of an infinite stream to
+	terminate normally in finite time.</p>
+	<h2>Terminal operations</h2>
+	<p>Terminal
+	operations, such as Stream.forEach or IntStream.sum, may traverse the
+	stream to produce a result or a side-effect. After the terminal
+	operation is performed, the stream pipeline is considered consumed,
+	and can no longer be used.</p>
+	<ul>
+	<li><p>If
+		you need to traverse the same data source again, <b>you
+		must return to the data source to get a new stream</b>.
+		In almost all cases, terminal operations are <i>eager</i>,
+		completing their traversal of the data source and processing of the
+		pipeline before returning. 
+		</p>
+	<li><p>Only
+		the terminal operations iterator() and spliterator() are not; these
+		are provided as an &quot;escape hatch&quot; to enable arbitrary
+		client-controlled pipeline traversals in the event that the existing
+		operations are not sufficient to the task.</p>
+	</ul>
+	<h2>Parallelism</h2>
+	<p>Processing
+	elements with an explicit for-loop is inherently serial. <b>Streams
+	facilitate parallel execution by reframing the computation as a
+	pipeline of aggregate operations</b>,
+	rather than as imperative operations on each individual element. All
+	streams operations can execute either in serial or in parallel. <b>The
+	stream implementations in the JDK create serial streams unless
+	parallelism is explicitly requested</b>.
+	</p>
+	<p>The
+	only difference between the serial and parallel versions of this
+	example is the creation of the initial stream, using
+	&quot;parallelStream()&quot; instead of &quot;stream()&quot;. When
+	the terminal operation is initiated, the stream pipeline is executed
+	sequentially or in parallel depending on the orientation of the
+	stream on which it is invoked. Whether a stream will execute in
+	serial or parallel can be determined with the isParallel() method,
+	and the orientation of a stream can be modified with the
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/BaseStream.html#sequential--">BaseStream.sequential()</a>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/BaseStream.html#parallel--">BaseStream.parallel()</a>
+	</p>
+	<p><b>Except
+	for operations identified as explicitly nondeterministic</b>,
+	such as findAny(), <b>whether
+	a stream executes </b>sequentially
+	or in parallel <b>should
+	not change the result of the computation.</b></p>
+	<p>Most
+	stream operations accept parameters that describe user-specified
+	behavior, which are often lambda expressions. To preserve correct
+	behavior, these <i>behavioral
+	parameters</i>
+	must be <i>non-interfering</i>,
+	and in most cases must be <i>stateless</i>.
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html">functional
+	interface</a><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">Function</a>,
+	and are often lambda expressions or method references.</p>
+	<h2>Non-interference</h2>
+	<p>Streams
+	<b>enable</b>
+	you to execute <b>possibly-parallel</b>
+	aggregate operations over a variety of data sources, <b>including
+	even non-thread-safe</b>
+	collections such as ArrayList. This is possible only <b>if
+	we can prevent </b><i><b>interference</b></i><b>
+	</b>with
+	the data source during the execution of a stream pipeline. Except for
+	the escape-hatch operations iterator() and spliterator(), execution
+	begins when the terminal operation is invoked, and ends when the
+	terminal operation completes. 
+	</p>
+	<p>For
+	most data sources, <b>preventing
+	interference means ensuring that the data source is </b><i><b>not
+	modified at all</b></i><b>
+	during the execution of the stream pipeline</b>.
+	</p>
+	<p>The
+	notable exception to this are streams whose sources are concurrent
+	collections, which are specifically designed to handle concurrent
+	modification. Concurrent stream sources are those whose Spliterator
+	reports the CONCURRENT characteristic.</p>
+	<h2>Stateless behaviors</h2>
+	<p>Stream
+	pipeline results may be nondeterministic or incorrect if the
+	behavioral parameters to the stream operations are <i>stateful</i>.
+	<b>A
+	stateful lambda</b>
+	(or other object implementing the appropriate functional interface)<b>
+	is one whose result depends on any state which might change during
+	the execution of the stream pipeline</b>.
+	</p>
+	<h2>Side-effects</h2>
+	<p>Side-effects
+	in behavioral parameters to stream operations are, in general,
+	discouraged, as they can often lead to unwitting violations of the
+	statelessness requirement, as well as other thread-safety hazards.</p>
+	<p>Many
+	computations where one might be tempted to use side effects can be
+	more safely and efficiently expressed without side-effects, such as
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction">reduction</a>
+	instead of mutable accumulators. However, side-effects such as using
+	println() for debugging purposes are usually harmless. <b>A
+	small number of stream operations, such as forEach() and peek(), can
+	operate only via side-effects; these should be used with care.</b></p>
+	<h2>Ordering</h2>
+	<ul>
+	<li><p>Streams
+		may or may not have a defined <i>encounter
+		order</i>.
+		<b>Whether
+		or not a stream has an encounter order depends on the source and the
+		intermediate operations</b>.
+		Certain stream sources (such as List or arrays) are intrinsically
+		ordered, whereas others (such as HashSet) are not. Some intermediate
+		operations, such as sorted(), may impose an encounter order on an
+		otherwise unordered stream, and others may render an ordered stream
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/BaseStream.html#unordered--">BaseStream.unordered()</a>.
+		Further, some terminal operations may ignore encounter order, such
+		as forEach().</p>
+	<li><p>If
+		a stream is ordered, most operations are constrained to operate on
+		the elements in their encounter order.</p>
+	<li><p>For
+		<b>sequential
+		streams</b>,
+		the<b>
+		presence or absence of an encounter order does not affect
+		performance</b>,
+		only determinism. If a stream is ordered, repeated execution of
+		identical stream pipelines on an identical source will produce an
+		identical result; if it is not ordered, repeated execution might
+		produce different results.</p>
+	<li><p><b>For
+		parallel streams, relaxing the ordering constraint can sometimes
+		enable more efficient execution</b>.
+		</p>
+	<li><p>Certain
+		aggregate operations, such as filtering duplicates (distinct()) or
+		grouped reductions (Collectors.groupingBy()) can be implemented more
+		efficiently if ordering of elements is not relevant. 
+		</p>
+	<li><p>Operations
+		that are intrinsically tied to encounter order, such as limit(), may
+		require buffering to ensure proper ordering, undermining the benefit
+		of parallelism. 
+		</p>
+	<li><p>In
+		cases where the stream has an encounter order, but the user does not
+		particularly <i>care</i>
+		about that encounter order, explicitly de-ordering the stream with
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/BaseStream.html#unordered--">unordered()</a>
+		may improve parallel performance for some stateful or terminal
+		operations. 
+		</p>
+	<li><p>Most
+		stream pipelines, such as the &quot;sum of weight of blocks&quot;
+		example above, still parallelize efficiently even under ordering
+		constraints.</p>
+	</ul>
+	<h2>Reduction operations</h2>
+	<p>A
+	<i>reduction</i>
+	operation (also called a <i>fold</i>)
+	takes a sequence of input elements and combines them into a single
+	summary result by repeated application of a combining operation, such
+	as finding the sum or maximum of a set of numbers, or accumulating
+	elements into a list. The streams classes have multiple forms of
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#reduce-java.util.function.BinaryOperator-">reduce()</a>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.stream.Collector-">collect()</a>,
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#sum--">sum()</a>,
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#max--">max()</a>,
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#count--">count()</a>.
+	</p>
+	<p>However,
+	there are good reasons to prefer a reduce operation over a mutative
+	accumulation such as the above. Not only is a reduction &quot;more
+	abstract&quot; -- <b>it
+	operates on the stream as a whole rather than individual elements</b>
+	-- but <b>a
+	properly constructed reduce operation is inherently parallelizable</b>,
+	so long as the function(s) used to process the elements are
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Associativity">associative</a>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterfering">stateless</a>.
+	</p>
+	<p>Reduction
+	parallellizes well because the implementation can operate on subsets
+	of the data in parallel, and then combine the intermediate results to
+	get the final correct answer. Using reduce() instead removes all of
+	the burden of parallelizing the reduction operation, and the library
+	can provide an efficient parallel implementation with no additional
+	synchronization required.</p>
+	<h2>Mutable reduction</h2>
+	<p><b>A
+	</b><i><b>mutable
+	reduction operation</b></i><b>
+	accumulates input elements into a mutable result container,</b>
+	such as a Collection or StringBuilder, as it processes the elements
+	in the stream.</p>
+	<ul>
+	<li><p>If
+		we wanted to take a stream of strings and concatenate them into a
+		single long string, we <i>could</i>
+		achieve this with ordinary reduction:</p>
+	</ul>
+	<p>String
+	concatenated = strings.reduce(&quot;&quot;, String::concat)</p>
+	<p>We
+	would get the desired result, and it would even work in parallel.
+	However, we might not be happy about the performance! Such an
+	implementation would do a great deal of string copying, and the run
+	time would be <i>O(n^2)</i>
+	in the number of characters. A more performant approach would be to
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html">StringBuilder</a>,
+	which is a mutable container for accumulating strings. We can use the
+	same technique to parallelize mutable reduction as we do with
+	ordinary reduction.</p>
+	<p>The
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.stream.Collector-">collect()</a>,
+	as it collects together the desired results into a result container
+	such as a Collection. A collect operation requires three functions: 
+	</p>
+	<ul>
+	<li><p>a
+		supplier function to construct new instances of the result
+		container, 
+		</p>
+	<li><p>an
+		accumulator function to incorporate an input element into a result
+		container, 
+		</p>
+	<li><p>and
+		a combining function to merge the contents of one result container
+		into another. The form of this is very similar to the general form
+		of ordinary reduction:</p>
+	</ul>
+	<p>&lt;R&gt;
+	R collect(Supplier&lt;R&gt; supplier,</p>
+	<p>BiConsumer&lt;R,
+	? super T&gt; accumulator,</p>
+	<p>BiConsumer&lt;R,
+	R&gt; combiner);</p>
+	<p>As
+	with reduce(), a benefit of expressing collect in this abstract way
+	is that it is directly amenable to parallelization: we can accumulate
+	partial results in parallel and then combine them, so long as the
+	accumulation and combining functions satisfy the appropriate
+	requirements. 
+	</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Difference Between CollectionsAnd Streams In Java </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://javaconceptoftheday.com/collections-and-streams-in-java/">Link
+	1</a></p>
+	<ol>
+	<li><p><b>Conceptual
+		Difference:</b><br><b>
+		Collections are used to store and group the data in a particular
+		data structure. But, streams are used to perform complex data
+		processing operations on stored data or I/O resources. That means,
+		collections</b>
+		are mainly <b>about
+		data</b>
+		and <b>streams</b>
+		are mainly <b>about
+		operations on data</b>.</p>
+	<li><p><b>Data
+		Modification:</b><br><b>
+		</b>You
+		can add to or remove elements from collections. But, you can’t add
+		to or remove elements from streams. Stream consumes a source,
+		performs operations on it and returns a result. They don’t modify
+		even the source also.</p>
+	<li><p><b>External
+		Iteration Vs Internal Iteration:</b><br><b>
+		</b>The
+		main specialty of Java 8 Streams is that you need not to worry about
+		iteration while using streams. Streams perform iteration internally
+		behind the scene for you. You just have to mention the operations to
+		be performed on a source.</p>
+	<li><p><b>Traversal:</b><br><b>
+		</b>Streams
+		are traversable only once. If you traverse the stream once, it is
+		said to be consumed. To traverse it again, you have to get new
+		stream from the source again. But, collections can be traversed
+		multiple times.</p>
+	<li><p><b>Eager
+		Construction Vs Lazy Construction:</b><br><b>
+		</b>Collections
+		are eagerly constructed i.e all the elements are computed at the
+		beginning itself. But, streams are lazily constructed i.e
+		intermediate operations are not evaluated until terminal operation
+		is invoked.</p>
+	</ol>
+		<div class='images'><img src='assets/Week 18/3.png'></div>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Pipeline </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://en.wikipedia.org/wiki/Pipeline_(computing)">Link</a></p>
+	<p>In
+	<a href="https://en.wikipedia.org/wiki/Computing">computing</a>, a
+	<b>pipeline</b>,
+	also known as a <b>data
+	pipeline</b>,
+	<a href="https://en.wikipedia.org/wiki/Data">data</a>
+	processing elements connected in series, where the output of one
+	element is the input of the next one. The elements of a pipeline are
+	often executed in parallel or in time-sliced fashion. Some amount of
+	<a href="https://en.wikipedia.org/wiki/Buffer_(computer_science)">buffer
+	storage</a> is often inserted between elements.</p>
+	<p>Computer-related
+	pipelines include:</p>
+	<ul>
+	<li><p><a href="https://en.wikipedia.org/wiki/Instruction_pipeline">Instruction
+		pipelines</a><a href="https://en.wikipedia.org/wiki/Classic_RISC_pipeline">classic
+		RISC pipeline</a><a href="https://en.wikipedia.org/wiki/Central_processing_unit">central
+		processing units</a><a href="https://en.wikipedia.org/wiki/Microprocessor">microprocessors</a>
+		to allow overlapping execution of multiple instructions with the
+	<a href="https://en.wikipedia.org/wiki/Digital_electronics">circuitry</a>.
+		The circuitry is usually divided up into stages and each stage
+		processes a specific part of one instruction at a time, passing the
+		partial results to the next stage. Examples of stages are
+		instruction decode, arithmetic/logic and register fetch. They are
+	<a href="https://en.wikipedia.org/wiki/Superscalar_execution">superscalar
+		execution</a><a href="https://en.wikipedia.org/wiki/Operand_forwarding">operand
+		forwarding</a><a href="https://en.wikipedia.org/wiki/Speculative_execution">speculative
+		execution</a><a href="https://en.wikipedia.org/wiki/Out-of-order_execution">out-of-order
+		execution</a>.</p>
+	<li><p><a href="https://en.wikipedia.org/wiki/Graphics_pipeline">Graphics
+		pipelines</a><a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">graphics
+		processing units</a><a href="https://en.wikipedia.org/wiki/Arithmetic_and_logical_unit">arithmetic
+		units</a><a href="https://en.wikipedia.org/wiki/Central_processing_unit">CPUs</a>,
+		that implement the various stages of common rendering operations
+	<a href="https://en.wikipedia.org/wiki/Perspective_projection">perspective
+		projection</a><a href="https://en.wikipedia.org/wiki/Clipping_(computer_graphics)">clipping</a>,
+	<a href="https://en.wikipedia.org/wiki/Color">color</a><a href="https://en.wikipedia.org/wiki/Light">light</a>
+		calculation, rendering, etc.).</p>
+	<li><p><a href="https://en.wikipedia.org/wiki/Pipeline_(software)">Software
+		pipelines</a><a href="https://en.wikipedia.org/wiki/Process_(computing)">processes</a>
+		(commands, program runs, tasks, threads, procedures, etc.),
+		conceptually executed in parallel, with the output stream of one
+		process being automatically fed as the input stream of the next one.
+	<a href="https://en.wikipedia.org/wiki/Unix">Unix</a> system
+	<a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)">pipe</a>
+		is a classic example of this concept.</p>
+	<li><p><a href="https://en.wikipedia.org/wiki/HTTP_pipelining">HTTP
+		pipelining</a><a href="https://en.wikipedia.org/wiki/HTTP">HTTP</a>
+	<a href="https://en.wikipedia.org/wiki/TCP_connection">TCP
+		connection</a>, without waiting for the previous one to finish
+		before issuing a new one.</p>
+	</ul>
+	<p>Some
+	<a href="https://en.wikipedia.org/wiki/Operating_systems">operating
+	systems</a><a href="https://en.wikipedia.org/wiki/Unix-like">UNIX-like</a>
+	syntax to string several program runs in a pipeline, but implement
+	the latter as simple serial execution, rather than true
+	pipelining—namely, by waiting for each program to finish before
+	starting the next one.</p>
+	<h2>Design considerations</h2>
+	<ul>
+	<li><p><b>Balancing
+		the stages: </b>Since
+		the throughput of a pipeline cannot be better than that of its
+		slowest element, the designer should try to divide the work and
+		resources among the stages so that they all take the same time to
+		complete their tasks. 
+		</p>
+	<ul>
+	<li><p>In
+			the car assembly example above, if the three tasks took 15 minutes
+			each, instead of 20, 10, and 15 minutes, the latency would still be
+			45 minutes, but a new car would then be finished every 15 minutes,
+			instead of 20.</p>
+		</ul>
+	<li><p><b>Buffering</b>:<b>
+		</b>Under
+		ideal circumstances, if all processing elements are synchronized and
+		take the same amount of time to process, then each item can be
+		received by each element just as it is released by the previous one,
+	<a href="https://en.wikipedia.org/wiki/Clock_(computing)">clock</a>
+		cycle. That way, the items will flow through the pipeline at a
+		constant speed, like waves in a water channel. In such &quot;wave
+		pipelines&quot;, no synchronization or buffering is needed between
+		the stages, besides the storage needed for the data items.<br>
+		<br>More
+		generally, <b>buffering
+		between the pipeline stages is necessary when the processing times
+		are irregular</b>,
+		or <b>when
+		items may be created or destroyed along the pipeline</b>.
+		</p>
+	<ul>
+	<li><p>For
+			example, in a graphics pipeline that processes triangles to be
+			rendered on the screen, an element that checks the visibility of
+			each triangle may discard the triangle if it is invisible, or may
+			output two or more triangular pieces of the element if they are
+			partly hidden.</p>
+		</ul>
+	</ul>
+	<p><br>Buffering
+	is also needed to accommodate irregularities in the rates at which
+	the application feeds items to the first stage and consumes the
+	output of the last one.<br><br><br>
+	</p>
+	<p><b>Buffering
+	process:</b><br>The
+	<a href="https://en.wikipedia.org/wiki/Hardware_register">hardware
+	register</a> with suitable synchronization and signalling logic
+	between the two stages. 
+	</p>
+	<ol>
+	<ol>
+	<li><p>When
+			a stage A stores a data item in the register, it sends a &quot;data
+			available&quot; signal to the next stage B. 
+			</p>
+	<li><p>Once
+			B has used that data, it responds with a &quot;data received&quot;
+			signal to A. 
+			</p>
+	<li><p>Stage
+			A halts, waiting for this signal, before storing the next data item
+			into the register. 
+			</p>
+	<li><p>Stage
+			B halts, waiting for the &quot;data available&quot; signal, if it
+			is ready to process the next item but stage A has not provided it
+			yet.</p>
+		</ol>
+	</ol>
+	<p>If
+	the processing times of an element are variable, the whole pipeline
+	may often have to stop, waiting for that element and all the previous
+	ones to consume the items in their input buffers.<br>
+	<br>The
+	<a href="https://en.wikipedia.org/wiki/Pipeline_stall">pipeline
+	stalls</a> can be reduced by providing space for more than one item
+	in the input buffer of that stage. Such a multiple-item buffer is
+	<a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">first-in,
+	first-out queue</a>. <br>The
+	upstream stage may still have to be halted when the queue gets full,
+	but the frequency of those events will decrease as more buffer slots
+	are provided. 		</p>
+	<p><a href="https://en.wikipedia.org/wiki/Queueing_theory">Queueing
+	theory</a> can tell the number of buffer slots needed, depending on
+	the variability of the processing times and on the desired
+	performance.</p>
+	<ul>
+	<li><p><b>Nonlinear
+		pipelines: </b>If
+		some stage takes (or may take) much longer than the others, and
+		cannot be sped up, the designer can provide two or more processing
+		elements to carry out that task in parallel, with a single input
+		buffer and a single output buffer. As each element finishes
+		processing its current data item, it delivers it to the common
+		output buffer, and takes the next data item from the common input
+		buffer. 
+		</p>
+	<ul>
+	<li><p>This
+			concept of &quot;non-linear&quot; or &quot;dynamic&quot; pipeline
+			is exemplified by shops or banks that have two or more cashiers
+			serving clients from a single waiting queue.</p>
+		</ul>
+	<li><p><b>Dependencies
+		between items: </b>In
+		some applications, the processing of an item Y by a stage A may
+		depend on the results or effect of processing a previous item X by
+		some later stage B of the pipeline. In that case, stage A cannot
+		correctly process item Y until item X has cleared stage B.<br><br>This
+		situation occurs very often in instruction pipelines. For example,
+		suppose that Y is an arithmetic instruction that reads the
+		contents of a register that was supposed to have been modified by an
+		earlier instruction X. Let A be the stage that fetches the
+	<a href="https://en.wikipedia.org/wiki/Operand">operands</a>,
+		and B be the stage that writes the result to the specified register.
+		If stage A tries to process instruction Y before instruction X
+		reaches stage B, the register may still contain the old value, and
+		the effect of Y would be incorrect.<br><br>In
+		order to handle such conflicts correctly, the pipeline must be
+		provided with extra circuitry or logic that detects them and takes
+		the appropriate action. Strategies for doing so include:<br><br><br>
+		</p>
+	<ul>
+	<li><p><b>Stalling:</b>
+			Every affected stage, such as A, is halted until the dependency is
+			resolved—that is, until the required information is available
+			and/or the required state has been achieved.</p>
+	<li><p><b>Reordering
+			items:</b>
+			Instead of stalling, stage A may put item Y aside and look for any
+			subsequent item Z in its input stream that does not have any
+			dependencies pending with any earlier item. In instruction
+	<a href="https://en.wikipedia.org/wiki/Out-of-order_execution">out-of-order
+			execution</a>.</p>
+	<li><p><b>Guess
+			and backtrack:</b>
+			One important example of item-to-item dependency is the handling of
+	<a href="https://en.wikipedia.org/wiki/Conditional_branch">conditional
+			branch</a> instruction X by an instruction pipeline. The first
+			stage A of the pipeline, that fetches the next instruction Y to be
+			executed, cannot perform its task until X has fetched its operand
+			and determined whether the branch is to be taken or not. That may
+			take many clock cycles, since the operand of X may in turn depend
+			on previous instructions that fetch data from main memory.</p>
+		</ul>
+	</ul>
+	<p>Rather
+	than halt while waiting for X to be finished, stage A may guess
+	whether the branch will be taken or not, and fetch the next
+	instruction Y based on that guess. If the guess later turns out to be
+	incorrect (hopefully rarely), the system would have to backtrack and
+	resume with the correct choice. 
+	</p>
+	<p>Namely,
+	all the changes that were made to the machine's state by stage A and
+	subsequent stages based on that guess would have to be undone, the
+	instructions following X already in the pipeline would have to be
+	flushed, and stage A would have to restart with the correct
+	<a href="https://en.wikipedia.org/wiki/Instruction_pointer">instruction
+	pointer</a><a href="https://en.wikipedia.org/wiki/Branch_prediction">branch
+	</a><a href="https://en.wikipedia.org/wiki/Branch_prediction">prediction</a>
+	<a href="https://en.wikipedia.org/wiki/Speculative_execution">speculative
+	execution</a>.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Side effect </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>In
+	<a href="https://en.wikipedia.org/wiki/Computer_science">computer
+	science</a><a href="https://en.wikipedia.org/wiki/Subroutine">function</a>
+	<a href="https://en.wikipedia.org/wiki/Expression_(programming)">expression</a>
+	is said to have a <b>side
+	effect</b>
+	<a href="https://en.wikipedia.org/wiki/State_(computer_science)">state</a>
+	variable value(s) <b>outside
+	its local environment</b>,
+	that is to say <b>has
+	an observable effect besides returning a value</b>
+	(the intended effect) to the invoker of the operation. State data
+	updated &quot;outside&quot; of the operation may be maintained
+	&quot;inside&quot; a stateful object or a wider stateful system
+	within which the operation is performed. In the presence of side
+	effects, a program's behaviours may depend on history; that is, the
+	order of evaluation matters. Understanding and debugging a function
+	with side effects requires knowledge about the context and its
+	possible histories</p>
+	<p><br><br>
+	</p>
+
+</mat-expansion-panel>
