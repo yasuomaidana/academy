@@ -1,0 +1,638 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Strings in java </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://www.javatpoint.com/string-comparison-in-java#:~:text=There%20are%20three%20ways%20to%20compare%20string%20in,another%29%20compares%20this%20string%20to%20the%20specified%20object.">Link
+	1</a></p>
+	<ul>
+	<li><p>In
+		java Strings are a sequence of characters</p>
+	<li><p>Are
+		inmutables</p>
+	</ul>
+	<ol>
+	<li><p>Ways
+		to compare Strings in Java<br>Using
+		user defined functions comparing characters</p>
+	<li><p>Using
+		String.equals(): This method compares the two given strings based on
+		the data/content of the string</p>
+	<li><p>Using
+		String.equalsIgnoreCase()</p>
+	</ol>
+</mat-expansion-panel>
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> ASCII vs Unicode </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+		<div class='images'><img src='assets/Week 19/1.png'></div>
+</mat-expansion-panel>
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Unicode </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://deliciousbrains.com/how-unicode-works/">Link
+	1,</a><a href="https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings">Link
+	2,</a><a href="https://en.wikipedia.org/wiki/UTF-16">Link 3,</a><a href="https://en.wikipedia.org/wiki/Unicode#Ready-made_versus_composite_characters">Link
+	4</a></p>
+	<ul>
+	<li><p>Unicode
+		is really just another type of character encoding, it’s still a
+		lookup of bits -&gt; characters.</p>
+	<li><p>The
+		main difference between Unicode and ASCII is that Unicode allows
+		characters to be up to 32 bits wide.</p>
+	</ul>
+	<p>Unicode's
+	success at unifying character sets has led to its widespread and
+	<a href="https://en.wikipedia.org/wiki/Internationalization_and_localization">internationalization
+	and localization</a><a href="https://en.wikipedia.org/wiki/Software">software</a>.
+	The standard has been implemented in many recent technologies,
+	<a href="https://en.wikipedia.org/wiki/Operating_system">operating
+	systems</a><a href="https://en.wikipedia.org/wiki/XML">XML</a>,
+	<a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>
+	<a href="https://en.wikipedia.org/wiki/Programming_language">programming
+	languages</a><a href="https://en.wikipedia.org/wiki/.NET_Framework">.NET
+	Framework</a>.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Unicode encoding </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p><a href="https://en.wikipedia.org/wiki/Comparison_of_Unicode_encodings">Unicode
+		can be implemented</a> by different character encodings. The Unicode
+	<a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>,
+	<a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>, and
+	<a href="https://en.wikipedia.org/wiki/UTF-32">UTF-32</a>, and
+		several other encodings.</p>
+	<li><p>Together
+		with Unicode comes several mechanisms to represent or encode the
+		characters. These are primarily the UTF-8 and UTF-16 encoding
+		schemes which both take a really smart approach to the size problem.</p>
+	<li><p>Unicode
+		encoding schemes like UTF-8 are more efficient in how they use their
+		bits. 
+		</p>
+	<ul>
+	<li><p>With
+			UTF-8, if a character can be represented with 1 byte that’s all
+			it will use. 
+			</p>
+	<ul>
+	<li><p>If
+				a character needs 4 bytes it’ll get 4 bytes. 
+				</p>
+	<li><p>This
+				is called a <i>variable
+				length encoding</i>
+				and it’s more efficient memory wise. Unicode encodings are
+	<a href="https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings">implements
+				the Unicode standard</a>.</p>
+			</ul>
+		</ul>
+	<li><p>The
+		great thing about UTF-8 is that the first 128 code points are
+		exactly the same as ASCII. 
+		</p>
+	<li><p>UTF-8,
+	<a href="https://en.wikipedia.org/wiki/World_Wide_Web">World
+		Wide Web</a> (used in over 95% of websites as of 2020, and up to
+		100% for some languages)</p>
+	</ul>
+	<h2>UTF-8 
+	</h2>
+	<ul>
+	<li><p>It
+		uses sequences of one to four bytes to encode Unicode code points.  
+		</p>
+	<li><p>UTF-8
+		is designed so that the byte values 0x00 to 0x7F always represent
+		code points U+0000 to U+007F (the Basic Latin block, which
+		corresponds to the ASCII character set). 
+		</p>
+	<li><p>These
+		byte values never occur in the representation of other code points,
+		a characteristic that makes UTF-8 convenient to use in software that
+		assigns special meanings to certain ASCII characters.</p>
+	</ul>
+	<h2>UTF-32</h2>
+	<p>UTF-32
+	(also referred to as UCS-4) uses four bytes to encode any given code
+	point, but not necessarily any given <i>user-perceived
+	character</i>
+	<a href="https://en.wikipedia.org/wiki/Grapheme">grapheme</a>),
+	since a user-perceived character may be represented by a <i>grapheme
+	cluster</i>
+	(a sequence of multiple code points)</p>
+	<ul>
+	<li><p>The
+		number of bytes per code point is fixed, facilitating code point
+		indexing; and is able to encode all Unicode code points</p>
+	<li><p>Although
+		UTF-32 has a fixed size for each code point, it is also
+		variable-length with respect to user-perceived characters</p>
+	<li><p>All
+		combining character sequences are graphemes, but there are other
+		sequences of code points that are as well.</p>
+	</ul>
+	<h2>UTF-16</h2>
+	<ul>
+	<li><p>The
+	<a href="https://en.wikipedia.org/wiki/Variable-width_encoding">variable-length</a>,
+		as code points are encoded with one or two 16-bit <i>code
+		units</i>.
+		</p>
+	<li><p>UTF-16
+	<a href="https://en.wikipedia.org/wiki/Microsoft_Windows">Microsoft
+		Windows</a><a href="https://en.wikipedia.org/wiki/Java_programming_language">Java
+		programming language</a><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>/ECMAScript.
+	<a href="https://en.wikipedia.org/wiki/Plain_text">plain
+		text</a> and for word-processing data files on Microsoft Windows. It
+	<a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a>
+		systems. 
+		</p>
+	<li><p>UTF-16
+	<a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>,<sup>[3]</sup>
+		and never gained popularity on the web, where it is used by under
+		0.002% (little over 1 thousandth of 1 percent) of web pages.</p>
+	</ul>
+	<p>Each
+	Unicode code point is encoded either as one or two 16-bit <i>code
+	units</i>.
+	How these 16-bit codes are stored as bytes then depends on the
+	<a href="https://en.wikipedia.org/wiki/Endianness">endianness</a>'
+	of the text file or communication protocol.</p>
+	<p>A
+	&quot;character&quot; may need from as few as two bytes to fourteen
+	<a href="https://en.wikipedia.org/wiki/Regional_indicator_symbol">emoji
+	flag character</a> takes 8 bytes, since it is &quot;constructed from
+	a pair of Unicode scalar values&quot; (and those values are outside
+	the BMP and require 4 bytes each).</p>
+	<ul>
+	<li><p>Values
+		U+0000 to U+FFFF are encoded in one 16-bit unit with the same value.
+		</p>
+	<li><p>Supplementary
+		characters are encoded in two code units, the first from the
+		high-surrogates range (U+D800 to U+DBFF), the second from the
+		low-surrogates range (U+DC00 to U+DFFF). 
+		</p>
+	</ul>
+	<p>This
+	may seem similar in concept to multi-byte encodings, but there is an
+	important difference: The values U+D800 to U+DFFF are reserved for
+	use in UTF-16; no characters are assigned to them as code points. 
+	</p>
+	<p>This
+	means, software can tell for each individual code unit in a string
+	whether it represents a one-unit character or whether it is the first
+	or second unit of a two-unit character. 
+	</p>
+	<p>This
+	is a significant improvement over some traditional multi-byte
+	character encodings, where the byte value 0x41 could mean the letter
+	&quot;A&quot; or be the second byte of a two-byte character.</p>
+	<h2>Abstract characters</h2>
+	<p>The
+	set of graphic and format characters defined by Unicode does not
+	correspond directly to the repertoire of <i>abstract
+	characters</i>
+	that is representable under Unicode. Unicode encodes characters by
+	associating an abstract character with a particular code point.<sup>[64]</sup>
+	However, not all abstract characters are encoded as a single Unicode
+	character, and some abstract characters may be represented in Unicode
+	by a sequence of two or more characters. For example, a Latin small
+	<a href="https://en.wikipedia.org/wiki/Ogonek">ogonek</a>,
+	<a href="https://en.wikipedia.org/wiki/Dot_above">dot above</a>,
+	<a href="https://en.wikipedia.org/wiki/Acute_accent">acute
+	accent</a><a href="https://en.wikipedia.org/wiki/Lithuanian_language">Lithuanian</a>,
+	is represented by the character sequence U+012F, U+0307, U+0301.
+	Unicode maintains a list of uniquely named character sequences for
+	abstract characters that are not directly encoded in Unicode.</p>
+	<h2>Unicode CodePoints</h2>
+	<p><i>A
+	code point is the atomic unit (irreducible unit) of information. Text
+	is a sequence of code points. Each code point is a number which is
+	given meaning by the Unicode standard.</i></p>
+	<ul>
+	<li><p>Unicode
+		characters can be referenced by their code point.</p>
+	<li><p>Unicode
+	<a href="https://en.wikipedia.org/wiki/Plane_(Unicode)">17
+		planes or groupings</a>.</p>
+	<li><p>To
+	<a href="https://en.wikipedia.org/wiki/Unicode#Ready-made_versus_composite_characters">as
+		a </a><a href="https://en.wikipedia.org/wiki/Unicode#Ready-made_versus_composite_characters"><i>combination</i>
+		of code points</a>.</p>
+	<ul>
+	<li><p><i>é
+			can be represented in Unicode as U+0065 (LATIN SMALL LETTER E)
+			followed by U+0301 (COMBINING ACUTE ACCENT), but it can also be
+			represented as the precomposed character U+00E9 (LATIN SMALL LETTER
+			E WITH ACUTE)</i></p>
+		</ul>
+	</ul>
+	<p>To
+	access code points we use the following syntax:</p>
+	<p>U+(hexadecimal
+	number of code point)</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> What's the difference betweena character, a code point, a glyph and a grapheme? </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://stackoverflow.com/questions/27331819/whats-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme/27331885#27331885">Link</a></p>
+	<ul>
+	<li><p><i>Character</i>
+		is an overloaded term that can mean many things.</p>
+	<li><p>A
+		<i>code
+		point</i>
+		is the atomic unit of information. <i>Text</i>
+		is a sequence of code points. Each code point is a number which is
+		given meaning by the Unicode standard.</p>
+	<li><p>A
+		<i>code
+		unit</i>
+		is the unit of storage of a <i>part</i>
+		of an encoded code point. In UTF-8 this means 8 bits, in UTF-16 this
+		means 16 bits. A single code unit may represent a full code point,
+		or part of a code point. For example, the snowman glyph (☃) is a
+		single code point but 3 UTF-8 code units, and 1 UTF-16 code unit.</p>
+	<li><p>A
+		<i>grapheme</i>
+		is a sequence of one or more code points that are displayed as a
+		single, graphical unit that a reader recognizes as a single element
+		of the writing system. For example, both a and ä are graphemes, but
+		they may consist of multiple code points (e.g. ä may be two code
+		points, one for the base character a followed by one for the
+		diaeresis; but there's also an alternative, legacy, single code
+		point representing this grapheme). Some code points are never part
+		of any grapheme (e.g. the zero-width non-joiner, or directional
+		overrides).</p>
+	<li><p>A
+		<i>glyph</i>
+		is an image, usually stored in a <i>font</i>
+		(which is a collection of glyphs), used to represent graphemes or
+		parts thereof. Fonts may compose multiple glyphs into a single
+		representation, for example, if the above ä is a single code point,
+		a font may choose to render that as two separate, spatially overlaid
+		glyphs. For OTF, the font's GSUB and GPOS tables contain
+		substitution and positioning information to make this work. A font
+		may contain multiple alternative glyphs for the same grapheme, too.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Syntactic sugar </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>In
+	<a href="https://en.wikipedia.org/wiki/Computer_science">computer
+	science</a>, <b>syntactic
+	sugar</b>
+	<a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)">syntax</a>
+	<a href="https://en.wikipedia.org/wiki/Programming_language">programming
+	language</a> that is designed to make things easier to read or to
+	express. It makes the language &quot;sweeter&quot; for human use:
+	things can be expressed more clearly, more concisely, or in an
+	alternative style that some may prefer.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Supplementary Characters inthe Java Platform </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://www.oracle.com/technical-resources/articles/javase/supplementary.html">Link
+	1</a></p>
+	<ul>
+	<li><p>A
+		<i>character</i>
+		is just an abstract minimal unit of text. It doesn't have a fixed
+		shape (that would be a <i>glyph</i>),
+		and it doesn't have a value. &quot;A&quot; is a character, and so is
+		&quot;€&quot;, the symbol for the common currency of Germany,
+		France, and numerous other European countries.</p>
+	<li><p>A
+		<i>character
+		set</i>
+		is a collection of characters. For example, the Han characters are
+		the characters originally invented by the Chinese, which have been
+		used to write Chinese, Japanese, Korean, and Vietnamese.</p>
+	<li><p>A
+		<i>coded
+		character set</i>
+		is a character set where each character has been assigned a unique
+		number. At the core of the Unicode standard is a coded character set
+		that assigns the letter &quot;A&quot; the number 0041 <sub>16</sub>
+		and the letter &quot;€&quot; the number 20AC <sub>16</sub>.
+		The Unicode standard always uses hexadecimal numbers, and writes
+		them with the prefix &quot;U+&quot;, so the number for &quot;A&quot;
+		is written as &quot;U+0041&quot;.</p>
+	</ul>
+	<p><i><b>Code
+	points</b></i>
+	are the <b>numbers
+	that can be used in a coded character set</b>.
+	A coded character set defines a range of <i>valid</i>
+	code points, but doesn't necessarily assign characters to all those
+	code points. The valid code points for Unicode are U+0000 to
+	U+10FFFF. Unicode 4.0 assigns characters to 96,382 of these more than
+	a million code points.</p>
+	<p><i><b>Supplementary
+	characters</b></i><b>
+	are characters with code points in the range U+10000 to U+10FFFF</b>,
+	that is, those characters that could not be represented in the
+	original 16-bit design of Unicode. The set of characters from U+0000
+	to U+FFFF is sometimes referred to as the <i>Basic
+	Multilingual Plane (BMP)</i>.
+	Thus, each Unicode character is either in the BMP or a supplementary
+	character.</p>
+	<p><b>A
+	</b><i><b>character
+	encoding scheme</b></i><b>
+	is a mapping from the numbers of one or more coded character sets to
+	sequences of one or more fixed-width </b><i><b>code
+	units</b></i>.
+	The most commonly used code units are bytes, but 16-bit or 32-bit
+	integers can also be used for internal processing. UTF-32, UTF-16,
+	and UTF-8 are character encoding schemes for the coded character set
+	of the Unicode standard.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Design Approach forSupplementary Characters in the Java Platform </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p>Use
+		the primitive type int to represent code points in low-level APIs,
+		such as the static methods of the Character class.</p>
+	<li><p>Interpret
+		char sequences in all forms as UTF-16 sequences, and promote their
+		use in higher-level APIs.</p>
+	<li><p>Provide
+		APIs to easily convert between various char and code point-based
+		representations.</p>
+	</ul>
+	<h2>Supplementary Characters in
+	the Open: Code point-based APIs</h2>
+	<p>The
+	low-level APIs that were added fall into two broad categories: 
+	</p>
+	<ul>
+	<li><p>Methods
+		that convert between various char and code point based
+		representations, 
+		</p>
+	<li><p>and
+		methods that analyze or map code points.</p>
+	</ul>
+	<h2>Basic methods</h2>
+	<p>The
+	most basic conversion methods are Character.toCodePoint(char high,
+	char low), which converts two UTF-16 code units to a code point, and
+	Character.toChars(int codePoint), which converts the given code point
+	to one or two UTF-16 code units, wrapped into a char[].</p>
+	<p>However,
+	since text most of the time comes in the form of a character
+	sequence, there are also codePointAt and codePointBefore methods to
+	extract a code point from the various character sequence
+	representations:</p>
+	<ul>
+	<li><p>Character.codePointAt(char[]
+		a, int index) 
+		</p>
+	<li><p>String.codePointBefore(int
+		index) are two typical examples.</p>
+	</ul>
+	<p>For
+	the most common cases of inserting code points into a character
+	sequence, there are appendCodePoint(int codePoint) methods for the
+	StringBuffer and StringBuilder classes and a String constructor that
+	takes an int[] representing code points.</p>
+	<p>A
+	few methods that analyze code units and code points help in the
+	conversion process: The isHighSurrogate and isLowSurrogate methods in
+	the Character class identify the char values that are used to
+	represent supplementary characters, and the charCount(int codePoint)
+	method determines whether a code point needs to be converted to one
+	or two chars.</p>
+	<h2>Other methods</h2>
+	<p>But
+	most code point-based methods perform functions for the complete
+	range of Unicode characters that older char based methods performed
+	for BMP characters. Here are some typical examples:</p>
+	<ul>
+	<li><p>Character.isLetter(int
+		codePoint) identifies letters according to the Unicode standard.</p>
+	<li><p>Character.isJavaIdentifierStart(int
+		codePoint) determines whether a code point can start an identifier
+		according to the Java Language Specification.</p>
+	<li><p>Character.UnicodeBlock.of(int
+		codePoint) looks up the Unicode block that the code point belongs
+		to.</p>
+	<li><p>Character.toUpperCase(int
+		codePoint) converts the given code point to its uppercase
+		equivalent. While this method does support supplementary characters,
+		it still cannot work around the fundamental issue that some case
+		conversions cannot be done correctly on a character-by-character
+		basis. The German character &quot;ß&quot;, for example, should be
+		converted to &quot;SS&quot;, which requires use of the
+		String.toUpperCase method.</p>
+	</ul>
+	<h2>Important NOTES</h2>
+	<ul>
+	<li><p>Note
+		that most methods that accept a code point do not check whether the
+		given int value is in the range of valid Unicode code points (<b>only
+		the range from 0x0 to 0x10FFFF is valid</b>).
+		</p>
+	<li><p>In
+		cases where validity cannot be guaranteed, applications must use the
+		<i>Character.isValidCodePoint</i>
+		method to make sure that the code point is valid. The behavior of
+		most methods for invalid code points is intentionally unspecified
+		and may vary between implementations.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Java Emojis manipulationexample </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>As
+	we can see in the following example.</p>
+	<ol>
+	<li><p>Length:<br>"🌉".length()
+		 //2, Expectations was it should return
+		1<br>&quot;🌉&quot;.codePointCount(0,&quot;🌉&quot;.length())
+		 //1, To get the number of Unicode characters in a Java String  
+		</p>
+	<li><p>Equality:<br>Represent
+		&quot;🌉&quot; to String using Unicode \ud83c\udf09 as below and
+		check equality.<br>&quot;🌉&quot;.equals(&quot;\ud83c\udf09&quot;)
+		// true<br><b>Java
+		does not support UTF-32</b><br>&quot;🌉&quot;.equals(&quot;\u1F309&quot;)
+		// false  
+		</p>
+	<li><p>You
+		can convert Unicode character to Java String<br>&quot;🌉&quot;.equals(new
+		String(Character.toChars(0x0001F309))) //true</p>
+	<li><p>String.substring()
+		does not consider supplementary characters<br>&quot;🌉🌐&quot;.substring(0,1)
+		//&quot;?&quot;<br>&quot;🌉🌐&quot;.substring(0,2)
+		//&quot;🌉&quot;<br>&quot;🌉🌐&quot;.substring(0,4)
+		//&quot;🌉🌐&quot;<br>To
+		solve this we can use String.offsetByCodePoints(int index, int
+		codePointOffset)<br>&quot;🌉🌐&quot;.substring(0,&quot;🌉🌐&quot;.offsetByCodePoints(0,1)
+		// &quot;🌉&quot;<br>&quot;🌉🌐&quot;.substring(2,&quot;🌉🌐&quot;.offsetByCodePoints(1,2))
+		// &quot;🌐&quot;</p>
+	<li><p>Iterating
+		Unicode string with <a href="https://docs.oracle.com/javase/8/docs/api/java/text/BreakIterator.html">BreakIterator</a></p>
+	<li><p>Sorting
+		Strings with Unicode <a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html">java.text.Collator</a></p>
+	<li><p>Character's
+		toUpperCase(), toLowerCase(), methods should not be used, instead,
+		use String uppercase and lowercase of particular locale.</p>
+	<li><p>Character.isLetter(char
+		ch) does not support, better used Character.isLetter(int codePoint),
+		for each methodName(char ch) method in the Character class there
+		will be type of methodName(int codePoint) which can handle
+		supplementary characters.</p>
+	<li><p>Specify
+		charset in String.getBytes(), converting from Bytes to String,
+		InputStreamReader, OutputStreamWriter</p>
+	</ol>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Surrogate Pair </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>A
+	surrogate pair is defined by the Unicode Standard as “a
+	representation for a single abstract character that consists of a
+	sequence of two 16-bit code units, where the first value of the pair
+	is a high-surrogate code unit and the second value is a low-surrogate
+	code unit.” 
+	</p>
+	<p>Since
+	Unicode is a 21-bit standard, surrogate pairs are needed by
+	applications that use UTF-16 to display characters whose code points
+	are greater than 16-bit.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Conversion algorithm </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>The
+	algorithm for converting to and from surrogate pairs is not widely
+	published on the internet. The official source is <a href="https://www.unicode.org/versions/Unicode3.0.0/ch03.pdf">The
+	Unicode Standard, Version 3.0</a>|
+	<a href="https://www.unicode.org/versions/Unicode3.0.0/">Unicode
+	3.0.0</a>
+	(not later versions), Section 3.7, Surrogates.</p>
+	<p>Conversion
+	of a Unicode scalar value S to a surrogate pair &lt;H, L&gt;:</p>
+	<p><b>H
+	= (S - 10000</b><sub><b>16</b></sub><b>)
+	/ 400</b><sub><b>16</b></sub><b>
+	+ D800</b><sub><b>16</b></sub></p>
+	<p><b>L
+	= (S - 10000</b><sub><b>16</b></sub><b>)
+	% 400</b><sub><b>16</b></sub><b>
+	+ DC00</b><sub><b>16</b></sub></p>
+	<p>The
+	conversion of a surrogate pair &lt;H, L&gt; to a scalar value S:</p>
+	<p><b>S
+	= (H - D800</b><sub><b>16</b></sub><b>)
+	* 400</b><sub><b>16</b></sub><b>
+	+ (L - DC00</b><sub><b>16</b></sub><b>)
+	+ 10000</b><sub><b>16</b></sub></p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Encoding </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>The
+	purpose of <b>encoding</b>
+	is to transform data so that it can be properly (and safely) consumed
+	by a different type of system, e.g. binary data being sent over
+	email, or viewing special characters on a web page. The goal is not
+	to keep information secret, but rather to ensure that it's able to be
+	properly consumed.</p>
+	<p>The
+	four primary <b>types
+	of encoding</b>
+	are visual, acoustic, elaborative, and semantic. <b>Encoding</b>
+	of memories in the brain can be optimized in a variety of ways,
+	including mnemonics, chunking, and state-dependent learning.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Which encoding system forstring java uses? </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><b>Java</b>
+	has supported Unicode since its first release and strings are
+	internally represented using <b>UTF</b>-<b>16</b>
+	encoding. <b>UTF</b>-<b>16</b>
+	is a variable length encoding scheme. For characters that can fit
+	into the <b>16</b>
+	bits space, it uses 2 bytes to represent them. For all other
+	characters, it uses 4 bytes.</p>
+
+</mat-expansion-panel>
