@@ -1,7 +1,7 @@
 import { ComponentType } from '@angular/cdk/portal';
 import { Component, OnInit } from '@angular/core';
-import { Book1Component } from './book1/book1.component';
-import { Book2Component } from './book2/book2.component';
+import { Book3Component } from './book3/book3.component';
+import { Book4Component } from './book4/book4.component';
 import { SummaryComponent } from './summary/summary.component';
 import { MatDialog} from '@angular/material/dialog'
 @Component({
@@ -12,17 +12,17 @@ import { MatDialog} from '@angular/material/dialog'
 export class Month4Component implements OnInit {
   books =
     [{
-      "title":"Code: The Hidden Language of Computer Hardware & Software",
-      "author":"Charles Petzold",
-      "imageA":"assets/Month 1/Charles_petzold.png",
-      "imageB":"assets/Month 1/Code.jpg",
-      "page":Book1Component
+      "title":"Cracking the Coding Interview",
+      "author":"Gayle Laakmann Mcdowell",
+      "imageA":"assets/Month 4/gayle.jpg",
+      "imageB":"assets/Month 4/cracking the coding.jpg",
+      "page":Book3Component
     },{
-      "title":"Make It Stick",
-      "author":"Peter C. Brow, Henry L. Roediger III, Marc A. Mc.Daniel",
-      "imageA":"assets/Month 1/MSA.jpg",
-      "imageB":"assets/Month 1/MakeStick.jpg",
-      "page":Book2Component
+      "title":"Elements of Programming Interviews in Java",
+      "author":"Adnan Aziz, Tsung-Hsien Lee, Amit Prakash",
+      "imageA":"assets/Month 4/java.jpg",
+      "imageB":"assets/Month 4/elements.jpg",
+      "page":Book4Component
     },{
       "title":"Summary month 1",
       "author":"Yasuo Maidana",

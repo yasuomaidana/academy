@@ -21,6 +21,8 @@ import { MothlyComponent } from './menu/monthly/monthly.component';
 import { Month1Component } from './menu/monthly/month1/month1.component';
 import { Book1Component } from './menu/monthly/month1/book1/book1.component';
 import { Book2Component } from './menu/monthly/month1/book2/book2.component';
+import { Book3Component } from './menu/monthly/month4/book3/book3.component';
+import { Book4Component } from './menu/monthly/month4/book4/book4.component';
 import { Week3Component } from './menu/weekly/week3/week3.component';
 import { Week4Component } from './menu/weekly/week4/week4.component';
 import { Week5Component } from './menu/weekly/week5/week5.component';
@@ -44,6 +46,8 @@ import { Week19Component } from './menu/weekly/week19/week19.component';
 import { Week20Component } from './menu/weekly/week20/week20.component';
 import { Month4Component } from './menu/monthly/month4/month4.component';
 import { SummaryComponent } from './menu/monthly/month4/summary/summary.component';
+import { ChaptersComponent } from './menu/monthly/month4/book3/chapters/chapters.component';
+
 
 
 @NgModule({
@@ -58,6 +62,8 @@ import { SummaryComponent } from './menu/monthly/month4/summary/summary.componen
     Month1Component,
     Book1Component,
     Book2Component,
+    Book3Component,
+    Book4Component,
     Week3Component,
     Week4Component,
     Week5Component,
@@ -81,6 +87,7 @@ import { SummaryComponent } from './menu/monthly/month4/summary/summary.componen
     Week20Component,
     Month4Component,
     SummaryComponent,
+    ChaptersComponent,
     
   ],
   imports: [
