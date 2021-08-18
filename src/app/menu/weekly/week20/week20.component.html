@@ -1,0 +1,45 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Collection </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><b>Link
+	1 </b></a>
+	</p>
+	<p>The
+	root interface in the <i>collection
+	hierarchy</i>.
+	A collection represents a group of objects, known as its <i>elements</i>.
+	Some collections allow duplicate elements and others do not. Some are
+	ordered and others unordered. 
+	</p>
+	<p>All
+	general-purpose Collection implementation classes (which typically
+	implement Collection indirectly through one of its subinterfaces)
+	should provide two &quot;standard&quot; constructors: 
+	</p>
+	<ul>
+	<li><p>a
+		void (no arguments) constructor, which creates an empty collection, 
+		</p>
+	<li><p>and
+		a constructor with a single argument of type Collection, which
+		creates a new collection with the same elements as its argument. In
+		effect, the latter constructor allows the user to copy any
+		collection, producing an equivalent collection of the desired
+		implementation type. There is no way to enforce this convention (as
+		interfaces cannot contain constructors) but all of the
+		general-purpose Collection implementations in the Java platform
+		libraries comply.</p>
+	</ul>
+	<p>It
+	is up to each collection to determine its own synchronization policy.
+	In the absence of a stronger guarantee by the implementation,
+	undefined behavior may result from the invocation of any method on a
+	collection that is being mutated by another thread; this includes
+	direct invocations, passing the collection to a method that might
+	perform invocations, and using an existing iterator to examine the
+	collection.</p>
+
+</mat-expansion-panel>
