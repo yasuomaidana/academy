@@ -1,0 +1,176 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Design Problems </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<h2>Design principles 
+	</h2>
+	<p>Algorithms
+	and Data Structures: Identify the basic algorithms and data
+	structures 
+	</p>
+	<p>Decomposition:
+	Split the functionality, architecture, and code into manageable,
+	reusable components. 
+	</p>
+	<p>Scalability:
+	Break the problem into subproblems that can be solved relatively
+	independently on different machines. Shard data across machines to
+	make it fit. Decouple the servers that handle writes from those that
+	handle reads. Use replication across the read servers to gain more
+	performance. Consider caching computation and later look it up to
+	save work.</p>
+	<h3>Scalability 
+	</h3>
+	<p>In
+	the context of interview questions parallelism is useful when dealing
+	with scale, i.e., when the problem is too large to fit on a single
+	machine or would take an <b>unacceptably
+	long</b>
+	time on a <b>single
+	machine.</b>
+	</p>
+	<p>The
+	key insight you need to display is that you know how to decompose the
+	problem so that 
+	</p>
+	<ul>
+	<li><p>each
+		subproblem can be solved relatively independently</p>
+	<li><p>the
+		solution to the original problem can be efficiently constructed from
+		solutions to the subproblems. 
+		</p>
+	</ul>
+	<p>Efficiency
+	is typically measured in terms of central processing unit (CPU) time,
+	random access memory (RAM), network bandwidth, number of memory and
+	database accesses, etc.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Object-Oriented Design </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>A
+	class is an encapsulation of data and methods that operate on that
+	data. Classes match the way we think about computation. They provide
+	encapsulation, which reduces the conceptual burden of writing code,
+	and enable code reuse, through the use of inheritance and
+	polymorphism.</p>
+	<p>A
+	design pattern is a general repeatable solution to a commonly
+	occurring problem. It is not a complete design that can be coded up
+	directly—rather, it is a description of how to solve a problem that
+	arises in many different situations. 
+	</p>
+	<ul>
+	<li><p>In
+		the context of object-oriented programming, design patterns address
+		both reuse and maintainability. 
+		</p>
+	<li><p>In
+		essence, design patterns make some parts of a system vary
+		independently from the other parts.</p>
+	</ul>
+	<p>The
+	idea behind the builder pattern is to build a complex object in
+	phases. It avoids mutability and inconsistent state by using an
+	mutable inner class that has a build method that returns the desired
+	object. Its key benefits are that it breaks down the construction
+	process, and can give names to steps. Compared to a constructor, it
+	deals far better with optional parameters and when the parameter list
+	is very long</p>
+	<p>A
+	static factory is a function for construction of objects. Its key
+	benefits are as follow: the function’s name can make what it’s
+	doing much clearer compared to a call to a constructor. The function
+	is not obliged to create a new object—in particular, it can return
+	a flyweight. It can also return a subtype that’s more optimized,
+	e.g., it can choose to construct an object that uses an integer in
+	place of a Boolean array if the array size is not more than the
+	integer word size</p>
+	<p>A
+	factory method defines interface for creating an object, but lets
+	subclasses decide which class to instantiate. A drawback of the
+	factory method pattern is that it makes subclassing challenging.</p>
+	<p>An
+	abstract factory provides an interface for creating families of
+	related objects without specifying their concrete classes. Use of
+	this pattern makes it possible to interchange concrete
+	implementations without changing the code that uses them, even at
+	runtime. The price for this flexibility is more planning and upfront
+	coding, as well as and code that may be harder to understand, because
+	of the added indirections.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Common Tools </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<h2>Version control</h2>
+	<p>Modern
+	version control systems allow developers to work concurrently on a
+	personal copy of the entire codebase. This allows software developers
+	to work independently. The price for this merging: periodically, the
+	personal copies need to be integrated to create a new shared version.
+	There is the possibility that parallel changes are conflicting, and
+	these must be resolved during the merge.</p>
+	<h2>Scripting languages 
+	</h2>
+	<p>Scripting
+	languages were originally developed as tools for quick hacks, rapid
+	prototyping, and gluing together other programs. They have evolved
+	into mainstream programming languages. Some of their characteristics
+	are as follows. 
+	</p>
+	<ul>
+	<li><p>Text
+		strings are the basic (sometimes only) data type. 
+		</p>
+	<li><p>Associative
+		arrays are a basic aggregate type. 
+		</p>
+	<li><p>Regexps
+		are usually built in. 
+		</p>
+	<li><p>Programs
+		are interpreted rather than compiled. 
+		</p>
+	<li><p>Declarations
+		are often not required. They are easy to get started with, and can
+		often do a great deal with very little code.</p>
+	</ul>
+	<h2>Build systems 
+	</h2>
+	<p>A
+	program typically cannot be executed immediately after change:
+	intermediate steps are required to build the program and test it
+	before deploying it. Other components can also be affected by
+	changes, such as documentation generated from program text. Build
+	systems automate these steps. 
+	</p>
+	<h2>Database 
+	</h2>
+	<p>Most
+	software systems today interact with databases, and it’s important
+	for developers to have basic knowledge of databases. 
+	</p>
+	<h2>Networking 
+	</h2>
+	<p>Most
+	software systems today interact with the network, and it’s
+	important for developers even higher up the stack to have basic
+	knowledge of networking. Here are networking questions you may
+	encounter in an interview setting.</p>
+
+</mat-expansion-panel>

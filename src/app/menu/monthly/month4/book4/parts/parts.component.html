@@ -1,0 +1,7 @@
+    <mat-expansion-panel hideToggle *ngFor="let part of parts" class="exP">
+      <mat-expansion-panel-header>
+        <mat-panel-title style="color: white;">{{part.name}}</mat-panel-title>
+        <mat-panel-description style="color: white;">{{part.description}}</mat-panel-description>
+      </mat-expansion-panel-header>
+      <ng-container *ngComponentOutlet="part.component"></ng-container>
+    </mat-expansion-panel>

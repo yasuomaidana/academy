@@ -1,0 +1,1750 @@
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Primitive Types  </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p>A program
+		updates variables in memory according to its instructions. 
+		</p>
+	<li><p>Variables
+		come in types:</p>
+	<ul>
+	<li><p>A type is a
+			classification of data that spells out possible values for that
+			type and the operations that can be performed on it</p>
+		</ul>
+	</ul>
+	<h2>Advices</h2>
+	<ul>
+	<li><p>Often, there
+		are multiple integers and floating-point types, depending on
+		signedness and precision</p>
+	<li><p>You
+		should know the primitive types very intimately, e.g., sizes,
+		ranges, signedness properties, and operators.</p>
+	</ul>
+	<h2>Bit manipulation</h2>
+	<ul>
+	<li><p>Be very
+		comfortable with the bitwise operators, particularly XOR. 
+		</p>
+	<li><p>Understand
+		how to use masks and create them in an machine independent way. 
+		</p>
+	<li><p>Know fast
+		ways to clear the lowermost set bit (and by extension, set the
+		lowermost 0, get its index, etc.) 
+		</p>
+	<li><p>Understand
+		signedness and its implications to shifting. 
+		</p>
+	<li><p>Consider
+		using a cache to accelerate operations by using it to brute-force
+		small inputs. 
+		</p>
+	<li><p>Be aware
+		that commutativity and associativity can be used to perform
+		operations in parallel and reorder operations</p>
+	</ul>
+	<p>Parity
+	checks are used to detect single bit errors in data storage and
+	communication</p>
+	<p>The
+	fact that x &amp; ~(x−1) isolates the lowest bit that is 1 in x is
+	important enough that you should memorize it.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Arrays </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p>The
+		simplest data structure is the array, which is a <b>contiguous
+		block of memory. </b>
+		</p>
+	<li><p>It
+		is usually used to represent sequences</p>
+	<li><p>When working
+		with arrays you should take advantage of the fact that you can
+		operate efficiently on both ends</p>
+	</ul>
+	<h2>Timing</h2>
+	<ul>
+	<li><p>Retrieving
+		and updating A[i] takes O(1) time. 
+		</p>
+	<li><p>Insertion
+		into a full array can be handled by resizing, i.e., allocating a new
+		array with additional memory and copying over the entries from the
+		original array. 
+		</p>
+	<ul>
+	<li><p>This
+			increases the worst-case time of insertion, but if the new array
+			has, for example, a constant factor larger than the original array,
+			the average time for insertion is constant since resizing is
+			infrequent. 
+			</p>
+		</ul>
+	<li><p>Deleting
+		an element from an array entails moving all successive elements one
+		over to the left to fill the vacated space.</p>
+	<li><p>The time
+		complexity to delete the element at index i from an array of length
+		n is O(n−i). The same is true for inserting a new element</p>
+	</ul>
+	<h2>Advices</h2>
+	<ul>
+	<li><p>Array
+		problems often have simple brute-force solutions that use O(n)
+		space, but there are subtler solutions that use the array itself to
+		reduce space complexity to O(1). 
+		</p>
+	<li><p>Filling
+		an array from the front is slow, so see if it’s possible to write
+		values from the back. 
+		</p>
+	<li><p><b>Instead
+		of deleting </b>an
+		entry (which requires moving all entries to its right), <b>consider
+		overwriting</b>
+		it. 
+		</p>
+	<li><p>When
+		dealing with integers encoded by an array consider processing the
+		digits from the back of the array. Alternately, reverse the array so
+		the least-significant digit is the first entry. 
+		</p>
+	<li><p>Be
+		comfortable with writing code that operates on subarrays. 
+		</p>
+	<li><p>It’s
+		incredibly easy to make off-by-1 errors when operating on
+		arrays—<b>reading
+		past the last element of an array is a common error</b>
+		which has catastrophic consequences.</p>
+	<li><p>Don’t
+		worry about preserving the integrity of the array (sortedness,
+		keeping equal entries together, etc.) until it is time to return. 
+		</p>
+	<li><p>An
+		array can serve as a <b>good
+		data structure when you know the distribution of the elements</b>
+		in advance. 
+		</p>
+	<li><p>When
+		operating on 2D arrays, use parallel logic for rows and for columns.
+		</p>
+	<li><p>Sometimes
+		it’s easier to simulate the specification, than to analytically
+		solve for the result. 
+		</p>
+	</ul>
+	<h2>Java library</h2>
+	<ul>
+	<li><p>The
+		basic array type in Java is fixed-size.</p>
+	<li><p>The
+		ArrayList type implements a dynamically resized array</p>
+	</ul>
+	<h3>Working</h3>
+	<ul>
+	<li><p>Know the
+		syntax for allocating and initializing an array, i.e., new
+		int[]"{{ '{' }}"1,2,3"{{ '}' }}".</p>
+	<li><p>Understand
+		how to instantiate a 2D array—new Integer[3][] creates an array
+		which will hold three rows, each of these must be explicitly
+		assigned. 
+		</p>
+	<li><p>Don’t
+		forget the length of an array is given by the length field, unlike
+		Collections, which uses the size() method, and String, which use the
+		length() method. 
+		</p>
+	<li><p>The Arrays
+		class consists of a set of static utility methods. All of them are
+		important: 
+		</p>
+	<ul>
+	<li><p>asList() 
+			</p>
+	<li><p>binarySearch(A,
+			641)</p>
+	<li><p>copyOf(A)</p>
+	<li><p>copyOfRange(A,
+			1,5)</p>
+	<li><p>equals(A,
+			B)</p>
+	<li><p>fill(A, 42)</p>
+	<li><p>find(A, 28)</p>
+	<li><p>sort(A)</p>
+	<li><p>sort(A,cmp)</p>
+	<li><p>toString().</p>
+		</ul>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Strings </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p>A
+		string can be viewed as a special kind of array, namely one made out
+		of characters. 
+		</p>
+	</ul>
+	<p>We
+	treat strings separately from arrays <i><b>because
+	certain operations</b></i>
+	which are commonly applied to strings:</p>
+	<ul>
+	<li><p>Comparison</p>
+	<li><p>Joining</p>
+	<li><p>Splitting</p>
+	<li><p>Searching
+		for substrings</p>
+	<li><p>Replacing
+		one string by another</p>
+	<li><p>Parsing</p>
+	</ul>
+	<p>The
+	latter is needed because <b>Java
+	strings are immutable</b>,
+	so to make string construction efficient, it’s necessary to have a
+	mutable string class</p>
+	<h2>Advices</h2>
+	<ul>
+	<li><p>Similar
+		to arrays, string problems often have simple brute-force solutions
+		that use O(n) space solution, but subtler solutions that use the
+		string itself to reduce space complexity to O(1). 
+		</p>
+	<li><p>Understand
+		the implications of a string type which is immutable</p>
+	<li><p>Know
+		alternatives to immutable strings, e.g., an <b>StringBuilder</b>
+		in Java. 
+		</p>
+	<li><p>Updating
+		a mutable string from the front is slow, so see if it’s possible
+		to write values from the back.</p>
+	</ul>
+	<h3>Working</h3>
+	<p>The
+	key methods on strings are:</p>
+	<ul>
+	<li><p>charAt(1)</p>
+	<li><p>compareTo(“foo”)</p>
+	<li><p>concat(“bar”)
+		(returns a new string—does not update the invoking string)</p>
+	<li><p>contains(“aba”)</p>
+	<li><p>endsWith(“YZ”)</p>
+	<li><p>indexOf(“needle”)</p>
+	<ul>
+	<li><p>indexOf(“needle”,
+			12)</p>
+	<li><p>indexOf(’A’)</p>
+	<li><p>indexOf(’B’,
+			offset)</p>
+	<li><p>lastIndexOf(“needle”)</p>
+		</ul>
+	<li><p>length()</p>
+	<li><p>replace(’a’,
+		’A’)</p>
+	<ul>
+	<li><p>replace(“a”
+			“ABC”)</p>
+	<li><p>foo::bar::abc”.split(“::”)</p>
+		</ul>
+	<li><p>startsWith(prefix)</p>
+	<ul>
+	<li><p>startsWith(“www”,
+			“http://”.length())</p>
+		</ul>
+	<li><p>substring(1)</p>
+	<ul>
+	<li><p>substring(1,5)</p>
+		</ul>
+	<li><p>toCharArray()</p>
+	<li><p>toLowerCase()</p>
+	<li><p>trim().
+		</p>
+	</ul>
+	<p>The
+	substring() method is particularly important, and also easy to get
+	wrong, since it has two variants: 
+	</p>
+	<ul>
+	<li><p>one
+		takes a start index, and returns a suffix (easily confused with
+		prefix)</p>
+	<li><p>and
+		the other takes a start and end index (the returned substring
+		includes the character at start but not the character at end). 
+		</p>
+	</ul>
+	<p>The
+	key methods in StringBuilder are:</p>
+	<ul>
+	<li><p>append()</p>
+	<li><p>charAt()</p>
+	<li><p>delete()</p>
+	<li><p>deleteCharAt()</p>
+	<li><p>insert()</p>
+	<li><p>replace()
+		</p>
+	<li><p>toString()</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Linked Lists </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<ul>
+	<li><p>A
+		list implements an ordered collection of values, which may include
+		repetitions. 
+		</p>
+	<li><p>Specifically,
+		a singly linked list is a data structure that contains a sequence of
+		nodes such that each node contains an object and a reference to the
+		next node in the list. 
+		</p>
+	<li><p>The
+		<b>first
+		node</b>
+		is referred to as the <b>head</b>
+		and the <b>last
+		node</b>
+		is referred to as the <b>tail</b>;
+		the tail’s next field is null.</p>
+	</ul>
+	<p>There
+	are many variants of linked lists, e.g., in a doubly linked list,
+	each node has a link to its predecessor; similarly, a sentinel node
+	or a self-loop can be used instead of null to mark the end of the
+	list</p>
+	<p>Inserting
+	and deleting elements in a list has time complexity O(1). On the
+	other hand, obtaining the kth element in a list is expensive, having
+	O(n) time complexity.</p>
+	<h2>Advices</h2>
+	<ul>
+	<li><p>List
+		problems often have a simple brute-force solution that uses O(n)
+		space, but a subtler solution that uses the existing list nodes to
+		reduce space complexity to O(1).</p>
+	<li><p>Very
+		often, a problem on lists is conceptually simple, and is more about
+		cleanly coding what’s specified, rather than designing an
+		algorithm. 
+		</p>
+	<li><p>Consider
+		using a dummy head (sometimes referred to as a sentinel) to avoid
+		having to check for empty lists. This simplifies code, and makes
+		bugs less likely. 
+		</p>
+	<li><p>It’s
+		easy to forget to update next (and previous for double linked list)
+		for the head and tail. 
+		</p>
+	<li><p>Algorithms
+		operating on singly linked lists often benefit from using two
+		iterators, one ahead of the other, or one advancing quicker than the
+		other.</p>
+	</ul>
+	<h2>Working with lists</h2>
+	<p>The
+	key methods for the List interface are: 
+	</p>
+	<ul>
+	<li><p>add(’A’)</p>
+	<ul>
+	<li><p>add(2,3.14)</p>
+		</ul>
+	<li><p>addAll(C)</p>
+	<ul>
+	<li><p>addAll(0,C)</p>
+		</ul>
+	<li><p>clear()</p>
+	<li><p>contains(2.71)</p>
+	<li><p>get(12)</p>
+	<li><p>indexOf(289)</p>
+	<li><p>isEmpty()</p>
+	<li><p>iterator()</p>
+	<li><p>listIterator()</p>
+	<li><p>remove(1)</p>
+	<li><p>removeAll(C)</p>
+	<li><p>retainAll(C)</p>
+	<li><p>set(3,42)</p>
+	<li><p>subList(1,5)</p>
+	<li><p>toArray()</p>
+	</ul>
+	<h3>Key things while operating
+	Java lists</h3>
+	<ul>
+	<li><p>The
+		two most commonly used implementations of the List interface are
+		ArrayList (implemented as a dynamically resized array) and
+		LinkedList (implemented as a doubly linked list). 
+		</p>
+	<ul>
+	<li><p>Some
+			operations are much slower on ArrayList, e.g., add(0,x) takes O(n)
+			time on an ArrayList, but O(1) time on a LinkedList. This is
+			because of the intrinsic difference between arrays and lists. 
+			</p>
+		</ul>
+	<li><p>Both
+		add(e) and remove(idx) are optional</p>
+	</ul>
+	<p>The
+	Java Collections <b>class
+	consists exclusively of static methods that operate on or return
+	collections</b>.
+	Some useful methods are: 
+	</p>
+	<ul>
+	<li><p>Collections.addAll(C,1,2,4)</p>
+	<li><p>Collections.binarySearch(list,42)</p>
+	<li><p>Collections.fill(list,’f’)</p>
+	<li><p>Collections.swap(C,0,1)</p>
+	<li><p>Collections.min(C)</p>
+	<ul>
+	<li><p>Collections.min(C,cmp)</p>
+		</ul>
+	<li><p>Collections.max(C)</p>
+	<ul>
+	<li><p>Collections.max(C,cmp)</p>
+		</ul>
+	<li><p>Collections.reverse(list)</p>
+	<li><p>Collections.rotate(list,12)</p>
+	<li><p>Collections.sort(list)</p>
+	<ul>
+	<li><p>Collections.sort(list,
+			cmp). 
+			</p>
+		</ul>
+	</ul>
+	<p>These
+	are, by-and-large, simple functions, but will save you time, and
+	result in cleaner code.</p>
+	<h3>Array.asList()</h3>
+	<p>Arrays.asList()
+	can be applied to scalar values, e.g., Arrays.asList(1,2,4) returns a
+	list of length 3, consisting of 1, 2, and 4. It can also be applied
+	to an array—it will create an object that implements the List
+	interface, <b>in
+	O(1) time</b>.
+	</p>
+	<p>Arrays.asList()
+	can be very helpful in an interview environment, where you may not
+	have the time to code up a tuple class or a class that’s just a
+	collection of getter/setter methods</p>
+	<p>The
+	object returned by Arrays.asList(array), <b>is
+	partially mutable</b>:
+	you can change existing entries, but you cannot add or delete
+	entries. This happens because Arrays.asList(array) <b>returns
+	an adapter around the original array</b>.
+	</p>
+	<ul>
+	<li><p>If
+		you call Arrays.asList() on an array of primitive type, e.g.,
+		Arrays.asList(new int[]1,2,4), you will get a list with a single
+		entry, which is likely not what you want. The
+		box-type, i.e., Arrays.asList(new Integer[]1,2,4), will yield the
+		desired result</p>
+	<li><p>To preserve
+		the original array, make a copy of it, e.g., with Arrays.copyOf(A,
+		A.length)</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Stacks and Queues </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>Stacks
+	support last-in, first-out semantics for inserts and deletes, whereas
+	queues are first-in, first-out</p>
+	<p>Stacks
+	</p>
+	<p>A
+	stack supports two basic operations—push and pop. Elements are
+	added (pushed) and removed (popped) in last-in, first-out order.</p>
+	<h3>Notes</h3>
+	<p>The
+	preferred way to represent stacks in Java is via the Deque interface.
+	The LinkedList class is a doubly linked list that implements this
+	interface, and provides efficient (O(1) time) stack (and queue)
+	functionality. 
+	</p>
+	<p>The
+	key stack-related methods in the Deque interface are:</p>
+	<ul>
+	<li><p>push(e)
+		pushes an element onto the stack. Not much can go wrong with a call
+		to push: some implementing classes may throw an
+		IllegalStateException if the capacity limit is exceeded, or a
+		NullPointerException if the element being inserted is null.
+		LinkedList has no capacity limit and allows for null entries, though
+		as we will see you should be very careful when adding null.</p>
+	<li><p>peek()
+		will retrieve, but does not remove, the element at the top of the
+		stack. If the stack is empty, it returns null. Since null may be a
+		valid entry, this leads to ambiguity. Therefore a better test for an
+		empty stack is isEmpty(). 
+		</p>
+	<li><p>pop()
+		will remove and return the element at the top of the stack. It
+		throws NoSuchElementException if the deque is empty. To avoid the
+		exception, first test with isEmpty().</p>
+	</ul>
+	<p>Queues
+	</p>
+	<p>A
+	queue supports two basic operations—enqueue and dequeue. (If the
+	queue is empty, dequeue typically returns null or throws an
+	exception.) Elements are added (enqueued) and removed (dequeued) in
+	first-in, first-out order. 
+	</p>
+	<p>The
+	most recently inserted element is referred to as the tail or back
+	element, and the item that was inserted least recently is referred to
+	as the head or front element.</p>
+	<p>A
+	deque, also sometimes called a double-ended queue, is a doubly linked
+	list in which all insertions and deletions are from one of the two
+	ends of the list, i.e., at the head or the tail. 
+	</p>
+	<p>An
+	insertion to the front is commonly called a push, and an insertion to
+	the back is commonly called an inject. 
+	</p>
+	<p>A
+	deletion from the front is commonly called a pop, and a deletion from
+	the back is commonly called an eject.</p>
+	<h2>Notes</h2>
+	<p>The
+	preferred way to manipulate queues is via the Deque interface. 
+	</p>
+	<p>The
+	LinkedList class is a doubly linked list that implements this
+	interface, and provides efficient (O(1) time) queue (and stack)
+	functionality. 
+	</p>
+	<p>The
+	key queue-related methods in the Deque interface are: 
+	</p>
+	<ul>
+	<li><p>addLast(3.14)</p>
+	<li><p>removeFirst()</p>
+	<li><p>getFirst()</p>
+	<li><p>offerLast(3.14)</p>
+	<li><p>pollFirst()</p>
+	<li><p>peekFirst().
+		</p>
+	</ul>
+	<p>Some
+	classes implementing Deque have capacity limits and/or preclude null
+	from being enqueued, but this is not the case for LinkedList.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Binary Trees </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>Formally,
+	a binary tree is either empty, or a root node r together with a left
+	binary tree and a right binary tree. The subtrees themselves are
+	binary trees. 
+	</p>
+	<p>The
+	left binary tree is sometimes referred to as the left subtree of the
+	root, and the right binary tree is referred to as the right subtree
+	of the root. Binary trees most commonly occur in the context of
+	binary search trees.</p>
+	<p>Binary
+	trees are appropriate when dealing with hierarchies.</p>
+	<p>
+	Some
+	characteristics</p>
+	<ul>
+	<li><p>Usually,
+		but not universally, the node object definition includes a parent
+		field (which is null for the root). 
+		</p>
+	<li><p>For
+		any node there exists a unique sequence of nodes from the root to
+		that node with each node in the sequence being a child of the
+		previous node. This sequence is sometimes referred to as the <b>search
+		path</b>
+		from the root to the node. 
+		</p>
+	<li><p>The
+		parent-child relationship defines an ancestor-descendant
+		relationship on nodes in a binary tree. Specifically, <b>a
+		node is an ancestor of d if it lies on the search path from the root
+		to d</b>.
+		</p>
+	<li><p>If
+		a node is an ancestor of d, we say d is a descendant of that node. 
+		</p>
+	<li><p>Our
+		convention is that a node is an ancestor and descendant of itself. 
+		</p>
+	<li><p><b>A
+		node that has no descendants except for itself is called a lea</b>f.
+		</p>
+	<li><p>The
+		depth of a node n is the number of nodes on the search path from the
+		root to n, not including n itself. 
+		</p>
+	<li><p>The
+		height of a binary tree is the maximum depth of any node in that
+		tree. 
+		</p>
+	<li><p>A
+		level of a tree is all nodes at the same depth. 
+		</p>
+	</ul>
+	<h2>Classification</h2>
+	<ul>
+	<li><p>A
+		full binary tree is a binary tree in which every node other than the
+		leaves has two children. 
+		</p>
+	<li><p>A
+		perfect binary tree is a full binary tree in which all leaves are at
+		the same depth, and in which every parent has two children. 
+		</p>
+	<li><p>A
+		complete binary tree is a binary tree in which every level, except
+		possibly the last, is completely filled, and all nodes are as far
+		left as possible.</p>
+	</ul>
+	<p>A
+	perfect binary tree of height h contains exactly 2<sup>h+1</sup>
+	−1 nodes, of which 2<sup>h</sup>
+	are leaves. A complete binary tree on n nodes has height log(h).</p>
+	<h2>Traversing</h2>
+	<p>A
+	key computation on a binary tree is traversing all the nodes in the
+	tree. (Traversing is also sometimes called walking.) Here are some
+	ways in which this visit can be done. 
+	</p>
+	<ul>
+	<li><p>Traverse
+		the left subtree, visit the root, then traverse the right subtree
+	<a href="https://www.youtube.com/watch?v=5dySuyZf9Qg">inorder
+		traversal</a>). 
+		</p>
+	<li><p>Visit the
+		root, traverse the left subtree, then traverse the right subtree (a
+	<a href="https://www.youtube.com/watch?v=1WxLM2hwL-U">preorder
+		traversal</a>) Traverse the left subtree, traverse the right
+	<a href="https://www.youtube.com/watch?v=4zVdfkpcT6U">postorder
+		traversal)</a> 
+		</p>
+	</ul>
+	<p>Let
+	T be a binary tree of n nodes, with height h. Implemented
+	recursively, these traversals have O(n) time complexity and O(h)
+	additional space complexity. (The space complexity is dictated by the
+	maximum depth of the function call stack.)</p>
+	<p>Additionally,
+	there exists another way to traverse tree called</p>
+	<ul>
+	<li><p><a href="https://www.youtube.com/watch?v=IozGo2kwRYE">Level
+		order</a></p>
+	</ul>
+	<h2>Advices</h2>
+	<p>Recursive
+	algorithms are well-suited to problems on trees. 
+	</p>
+	<ul>
+	<li><p>Remember
+		to include space implicitly allocated on the function call stack
+		when doing space complexity analysis. 
+		</p>
+	</ul>
+	<p>Some
+	tree problems have simple brute-force solutions that use O(n) space
+	solution, but subtler solutions that uses the existing tree nodes to
+	reduce space complexity to O(1). 
+	</p>
+	<p>Consider
+	left- and right-skewed trees when doing complexity analysis. 
+	</p>
+	<ul>
+	<li><p>Note
+		that O(h) complexity, where h is the tree height, translates into
+		O(log n) complexity for balanced trees, but O(n) complexity for
+		skewed trees. 
+		</p>
+	</ul>
+	<p>If
+	each node has a parent field, use it to make your code simpler, and
+	to reduce time and space complexity. 
+	</p>
+	<p>It’s
+	easy to make the mistake of treating a node that has a single child
+	as a leaf.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Heaps </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>A
+	heap is a specialized binary tree. The keys must satisfy the heap
+	property—the key at each node is at least as great as the keys
+	stored at its children</p>
+	<p>A
+	max-heap supports O(log n) insertions, O(1) time lookup for the max
+	element, and O(log n) deletion of the max element. The extract-max
+	operation is defined to delete and return the maximum element</p>
+	<p>Searching
+	for arbitrary keys has O(n) time complexity</p>
+	<p>A
+	heap is sometimes referred to as a priority queue because it behaves
+	like a queue, with one difference: each element has a “priority”
+	associated with it, and deletion removes the element with the highest
+	priority</p>
+	<p>The
+	min-heap is a completely symmetric version of the data structure and
+	supports O(1) time lookups for the minimum element.</p>
+	<h2>Advices</h2>
+	<ul>
+	<li><p>Use
+		a heap when all you care about is the largest or smallest elements,
+		and you do not need to support fast lookup, delete, or search
+		operations for arbitrary elements. 
+		</p>
+	<li><p>A
+		heap is a good choice when you need to compute the k largest or k
+		smallest elements in a collection. For the former, use a min-heap,
+		for the latter, use a max-heap</p>
+	</ul>
+	<h2>Java implementation</h2>
+	<p>The
+	implementation of a heap in the Java Collections framework is
+	referred to as a priority queue; the class is PriorityQueue. The key
+	methods are: 
+	</p>
+	<ul>
+	<li><p>add(“Gauss”)</p>
+	<li><p>peek()</p>
+	<li><p>and
+		poll()</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Searching </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<h2>Binary search</h2>
+	<p>Fundamentally,
+	binary search is a natural elimination-based strategy for searching a
+	sorted array. The idea is to eliminate half the keys from
+	consideration by keeping the keys in sorted order. If the search key
+	is not equal to the middle element of the array, one of the two sets
+	of keys to the left and to the right of the middle element can be
+	eliminated from further consideration</p>
+	<ul>
+	<li><p>Get middle
+		index M = L + (U - L) / 2.</p>
+	</ul>
+	<p>A
+	disadvantage of binary search is that it requires a sorted array and
+	sorting an array takes O(n log n) time. However, if there are many
+	searches to perform, the time taken to sort is not an issue.</p>
+	<h2>Advices</h2>
+	<ul>
+	<li><p>Binary
+		search is an effective search tool. It is applicable to more than
+		just searching in sorted arrays, e.g., it can be used to search an
+		interval of real numbers or integers. 
+		</p>
+	<li><p>If
+		your solution uses sorting, and the computation performed after
+		sorting is faster than sorting, e.g., O(n) or O(log n), look for
+		solutions that do not perform a complete sort. 
+		</p>
+	<li><p>Consider
+		time/space tradeoffs, such as making multiple passes through the
+		data.</p>
+	</ul>
+	<h2>Notes</h2>
+	<ul>
+	<li><p>To
+		search an array, use Arrays.binarySearch(A,“Euler”). The time
+		complexity is O(log n), where n is length of the array.</p>
+	<li><p>To
+		search a sorted List-type object, use
+		Collections.binarySearch(list,42). These return the index of the
+		searched key if it is present, and a negative value if it is not
+		present. 
+		</p>
+	<li><p>The
+		time complexity depends on the nature of the List implementation. 
+		</p>
+	<ul>
+	<li><p>For
+			ArrayList (and more generally, any List implementation in which
+			positional access is constant-time), it is O(log n), where n is the
+			number of elements in the list. 
+			</p>
+	<li><p>For
+			LinkedList it is O(n). 
+			</p>
+		</ul>
+	<li><p>When
+		there are multiple occurrences of the search key, neither Arrays nor
+		Collections offer any guarantees as to which one will be found by
+		binary search. 
+		</p>
+	<li><p>If
+		the search key is not present, both methods return (−(insertion
+		point) − 1), where insertion point is defined as the point at
+		which the key would be inserted into the array, i.e., the index of
+		the first element greater than the key, or the number of elements if
+		all elements are less than the specified value.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Hash Tables </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>A
+	hash table is a data structure used to store keys, optionally, with
+	corresponding values. Inserts, deletes and lookups run in O(1) time
+	on average.</p>
+	<p>The
+	underlying idea is to store keys in an array. A key is stored in the
+	array locations (“slots”) based on its “hash code”.</p>
+	<p>The
+	hash code is an integer computed from the key by a hash function. If
+	the hash function is chosen well, the objects are distributed
+	uniformly across the array locations.</p>
+	<p>If
+	two keys map to the same location, a “collision” is said to
+	occur. 
+	</p>
+	<ul>
+	<li><p>The
+		standard mechanism to deal with collisions is to maintain a linked
+		list of objects at each array location.</p>
+	</ul>
+	<p>If
+	the hash function does a good job of spreading objects across the
+	underlying array and take O(1) time to compute, on average, lookups,
+	insertions, and deletions have O(1+n/m) time complexity, where n is
+	the number of objects and m is the length of the array.</p>
+	<p>If
+	the “load” n/m grows large, rehashing can be applied to the hash
+	table. A new array with a larger number of locations is allocated,
+	and the objects are moved to the new array. Rehashing is expensive
+	(O(n + m) time) but if it is done infrequently (for example, whenever
+	the number of entries doubles), its amortized cost is low.</p>
+	<p>A
+	hash table is qualitatively different from a sorted array—keys do
+	not have to appear in order, and randomization (specifically, the
+	hash function) plays a central role.</p>
+	<p>Compared
+	to binary search trees, inserting and deleting in a hash table is
+	more efficient (assuming rehashing is infrequent).</p>
+	<p>One
+	disadvantage of hash tables is the need for a good hash function but
+	this is rarely an issue in practice. 
+	</p>
+	<ul>
+	<li><p>Similarly,
+		rehashing is not a problem outside of real-time systems and even for
+		such systems, a separate thread can do the rehashing.</p>
+	</ul>
+	<p>A
+	hash function has one hard requirement—equal keys should have equal
+	hash codes.</p>
+	<p>A
+	softer requirement is that the hash function should “spread”
+	keys, i.e., the hash codes for a subset of objects should be
+	uniformly distributed across the underlying array. In addition, a
+	hash function should be efficient to compute.</p>
+	<p>A
+	common mistake with hash tables is that a key that’s present in a
+	hash table will be updated. 
+	</p>
+	<ul>
+	<li><p>The
+		consequence is that a lookup for that key will now fail, even though
+		it’s still in the hash table. 
+		</p>
+	<li><p>If
+		you have to update a key, first remove it, then update it, and
+		finally, add it back—this ensures it’s moved the correct array
+		location. As a rule, you should<b>
+		avoid using mutable objects as keys</b>.</p>
+	</ul>
+	<h2>Advices</h2>
+	<p>Hash
+	tables have the best theoretical and real-world performance for
+	lookup, insert and delete. Each of these operations has O(1) time
+	complexity. The O(1) time complexity for insertion is for the average
+	case a single insert can take O(n) if the hash table has to be
+	resized.</p>
+	<p>Consider
+	using a hash code as a signature to enhance performance, e.g., to
+	filter out candidates.</p>
+	<p>Consider
+	using a precomputed lookup table instead of boilerplate if-then code
+	for mappings, e.g., from character to value, or character to
+	character.</p>
+	<p>When
+	defining your own type that will be put in a hash table, be sure you
+	understand the relationship between logical equality and the fields
+	the hash function must inspect. Specifically, anytime equality is
+	implemented, it is imperative that the correct hash function is also
+	implemented, otherwise when objects are placed in hash tables,
+	logically equivalent objects may appear in different buckets, leading
+	to lookups returning false, even when the searched item is present.</p>
+	<p>Sometimes
+	you’ll need a multimap, i.e., a map that contains multiple values
+	for a single key, or a bi-directional map. If the language’s
+	standard libraries do not provide the functionality you need, learn
+	how to implement a multimap using lists as values, or find a third
+	party library that has a multimap</p>
+	<h2>Notes</h2>
+	<p>There
+	are two hash table-based data structures commonly used in
+	Java—HashSet and HashMap. The difference between the two is that
+	the latter stores key-value pairs, whereas the former simply stores
+	keys. Both have the property that they <b>do
+	not allow for duplicate keys</b>.</p>
+	<p>The
+	most important methods for HashSet are methods defined in Set:</p>
+	<table>
+	<col>
+	<col>
+	<tr>
+	<td>
+	<p>add(144)</p>
+	<p>remove(“Cantor”)</p>
+	<p>contains(24)</p>
+			</td>
+	<td>
+	<p>iterator()</p>
+	<p>isEmpty()</p>
+	<p>and
+				size().</p>
+			</td>
+		</tr>
+	</table>
+	<p>Both
+	add(144) and remove(“Cantor”) <b>return
+	a boolean indicating if the added/removed</b>
+	element was already present. 
+	</p>
+	<ul>
+	<li><p>It’s
+		important to remember that null is a valid entry.</p>
+	</ul>
+	<ul>
+	<li><p>The
+		order in which keys are traversed by the iterator returned by
+		iterator() is unspecified; it may even change with time. 
+		</p>
+	<ul>
+	<li><p>The
+			class LinkedHashSet subclasses HashSet—the only difference is
+			that iterator() returns keys in the order in which they were
+			inserted into the set. 
+			</p>
+	<ul>
+	<li><p>This
+				order is not affected if an element is re-inserted into the set,
+				i.e., if s.add(x) is called when s.contains(x) is true. 
+				</p>
+			</ul>
+		</ul>
+	<li><p>HashSet
+		implements retainAll(C), which can be used to perform set
+		intersection—this can be used to reduce coding burden
+		substantially in some cases. A related method is removeAll(C). 
+		</p>
+	</ul>
+	<p>The
+	most important methods for HashMap are methods defined in Map:</p>
+	<table>
+	<col>
+	<col>
+	<tr>
+	<td>
+	<p>put(’z’,
+				26)</p>
+	<p>get(“Hardy”)</p>
+			</td>
+	<td>
+	<p>remove(’z’)</p>
+	<p>containsKey(“Hardy”)</p>
+			</td>
+		</tr>
+	</table>
+	<ul>
+	<li><p>There
+		are several methods that are relevant to iteration</p>
+	<ul>
+	<li><p>entrySet()</p>
+	<li><p>keySet()</p>
+	<li><p>values()</p>
+		</ul>
+	</ul>
+	<p>(Note
+	that these methods do not follow a parallel naming scheme.) The
+	generic static inner class Map.Entry is used to iterate over
+	key-value pairs. Iteration order is not fixed (though iteration over
+	the entry set, the key set, and the value set does match up). 
+	</p>
+	<ul>
+	<li><p>To
+		iterate in fixed order, use a LinkedHashMap. A LinkedHashMap is
+		somewhat more complex than a LinkedHashSet—for example, it can be
+		specified that the iteration should proceed in insertion order, or
+		in access order will move the corresponding element to the front of
+		the ordering). A LinkedHashMap can also specify capacity
+		constraints, and enable an LRU eviction policy.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Sorting </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>Sorting
+	is used to preprocess the collection to make searching faster, as
+	well as identify items that are similar.</p>
+	<p>A
+	number of sorting algorithms run in O(n log n) time—heapsort, merge
+	sort, and quicksort are examples. 
+	</p>
+	<p>Each
+	has its advantages and disadvantages: for example, heapsort is
+	in-place but not stable; merge sort is stable but not in-place;
+	quicksort runs O(n 2 ) time in worst-case. (An in-place sort is one
+	which uses O(1) space.)</p>
+	<p>A
+	stable sort is one where entries which are equal appear in their
+	original order</p>
+	<p>For
+	short arrays, e.g., 10 or fewer elements, insertion sort is easier to
+	code and faster than asymptotically superior sorting algorithms. 
+	</p>
+	<p>If
+	every element is known to be at most k places from its final
+	location, a min-heap can be used to get an O(n log k) algorithm. 
+	</p>
+	<p>If
+	there are a small number of distinct keys, e.g., integers in the
+	range [0..255], counting sort, which records for each element, the
+	number of elements less than it, works well. 
+	</p>
+	<ul>
+	<li><p>This
+		count can be kept in an array (if the largest number is comparable
+		in value to the size of the set being sorted) or a BST, where the
+		keys are the numbers and the values are their frequencies. If there
+		are many duplicate keys we can add the keys to a BST, with linked
+		lists for elements which have the same key; the sorted result can be
+		derived from an in-order traversal of the BST</p>
+	</ul>
+	<p>Most
+	sorting algorithms are not stable.</p>
+	<h2>Libraries</h2>
+	<ul>
+	<li><p><b>The time
+		complexity of Arrays.sort(A) is O(n log n)</b>,
+		where n is length of the array A. The space complexity is as high as
+		n/2 object references for randomly ordered input arrays. For nearly
+		sorted inputs, both time and space complexity are much better:
+		approximately n comparisons, and constant space. 
+		</p>
+	<li><p>Arrays.sort(A)
+		operates on arrays of objects that implement the Comparable
+		interface. Collections.sort(C) does the same on lists. 
+		</p>
+	<li><p>Both
+		Arrays.sort(A, cmp) and Collections.sort(C, customCmp) have the
+		provision of sorting according to an explicit comparator object, as
+		shown on the current page. 
+		</p>
+	<li><p>Collections.sort(L)
+		internally proceeds by forming an array A, calling Arrays.sort(A) on
+		that array, and then writing the result back into the list L. This
+		implies that the time complexity of Collections.sort(L) is the same
+		as that of Arrays.sort(A). Because of the copy, the space complexity
+		is always O(n). In particular, Collections.sort(L) applied to a
+		LinkedList has O(n log n) time complexity.</p>
+	</ul>
+	<h2>Advices</h2>
+	<p>Sorting
+	problems come in two flavors: 
+	</p>
+	<ul>
+	<li><p>use
+		sorting to make subsequent steps in an algorithm simpler</p>
+	<li><p>design
+		a custom sorting routine. 
+		</p>
+	</ul>
+	<p>For
+	the former, it’s fine to use a library sort function, possibly with
+	a custom comparator. For the latter, use a data structure like a BST,
+	heap, or array indexed by values. 
+	</p>
+	<p>Certain
+	problems become easier to understand, as well as solve, when the
+	input is sorted. The most natural reason to sort is if the inputs
+	have a natural ordering, and sorting can be used as a preprocessing
+	step to speed up searching. 
+	</p>
+	<p>For
+	specialized input, e.g., a very small range of values, or a small
+	number of values, it’s possible to sort in O(n) time rather than
+	O(n log n) time. It’s often the case that sorting can be
+	implemented in less space than required by a brute-force approach. 
+	</p>
+	<p>Sometimes
+	it is not obvious what to sort on, e.g., should a collection of
+	intervals be sorted on starting points or endpoints?</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Binary Search Trees </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>BSTs
+	are a workhorse of data structures and can be used to solve almost
+	every data structures problem reasonably efficiently. 
+	</p>
+	<p>They
+	offer the ability to efficiently search for a key as well as find the
+	min and max elements, look for the successor or predecessor of a
+	search key (which itself need not be present in the BST), and
+	enumerate the keys in a range in sorted order.</p>
+	<p>The
+	keys stored at nodes have to respect the BST property—the key
+	stored at a node is greater than or equal to the keys stored at the
+	nodes of its left subtree and less than or equal to the keys stored
+	in the nodes of its right subtree.</p>
+	<p>However,
+	there are implementations of insert and delete which guarantee that
+	the tree has height O(log n).</p>
+	<p>As
+	a rule, <b>avoid
+	putting mutable objects in a BST</b>.
+	Otherwise, when a mutable object that’s in a BST is to be updated,
+	always first remove it from the tree, then update it, then add it
+	back.</p>
+	<h2>Advices</h2>
+	<p>With
+	a BST you can iterate through elements in sorted order in time O(n)
+	(regardless of whether it is balanced). 
+	</p>
+	<p>Some
+	problems need a combination of a BST and a hashtable. 
+	</p>
+	<ul>
+	<li><p>For
+		example, if you insert student objects into a BST and entries are
+		ordered by GPA, and then a student’s GPA needs to be updated and
+		all we have is the student’s name and new GPA, we cannot find the
+		student by name without a full traversal. However, with an
+		additional hash table, we can directly go to the corresponding entry
+		in the tree. 
+		</p>
+	</ul>
+	<p>The
+	BST property is a global property—a binary tree may have the
+	property that each node’s key is greater than the key at its left
+	child and smaller than the key at its right child, but it may not be
+	a BST</p>
+	<h2>Libraries</h2>
+	<p>There
+	are two BST-based data structures commonly used in Java—TreeSet and
+	TreeMap.</p>
+	<ul>
+	<li><p>The
+		iterator returned by iterator() traverses keys in ascending order.
+		(To iterate over keys in descending order, use
+		descendingIterator().) 
+		</p>
+	</ul>
+	<ul>
+	<li><p>first()/last()
+		yield the smallest and largest keys in the tree. 
+		</p>
+	<li><p>lower(12)/higher(3)
+		yield the largest element strictly less than the argument/smallest
+		element strictly greater than the argument 
+		</p>
+	<li><p>floor(4.9)/ceiling(5.7)
+		yield the largest element less than or equal to the
+		argument/smallest element greater than or equal to the argument. 
+		</p>
+	<li><p>headSet(10),
+		tailSet(5), subSet(1,12) return views of the portion of the keys
+		lying in the given range. It’s particularly important to note that
+		these operations take O(log n) time, since they are backed by the
+		underlying tree. This implies changes to the tree may change the
+		view. It also means that operations like size() have O(n) time
+		complexity.</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Recursion </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>Recursion
+	is an approach to problem solving where the solution depends
+	partially on solutions to smaller instances of related problems</p>
+	<p>It
+	is often appropriate when the input is expressed using recursive
+	rules, such as a computer grammar. 
+	</p>
+	<p>A
+	recursive function consists of:</p>
+	<ul>
+	<li><p>base
+		cases, 
+		</p>
+	<li><p>and
+		calls to the same function with different arguments. 
+		</p>
+	</ul>
+	<p>Two
+	key ingredients to a successful use of recursion are <b>identifying
+	the base cases</b>,
+	which are to be solved directly, and ensuring progress, that is the
+	recursion converges to the solution</p>
+	<p>Both
+	backtracking and branch-and-bound are naturally formulated using
+	recursion.</p>
+	<h2>Advices</h2>
+	<p>Recursion
+	is especially suitable when the input is expressed using recursive
+	rules such as a computer grammar. 
+	</p>
+	<p>Recursion
+	is a good choice for search, enumeration, and divide-and-conquer. 
+	</p>
+	<p>Use
+	recursion as alternative to deeply nested iteration loops. 
+	</p>
+	<p>If
+	you are asked to remove recursion from a program, consider mimicking
+	call stack with the stack data structure. 
+	</p>
+	<p>Recursion
+	can be easily removed from a tail-recursive program by using a
+	while-loop—no stack is needed. 
+	</p>
+	<p>If
+	a recursive function may end up being called with the same arguments
+	more than once, cache the results</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Dynamic Programming </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>DP
+	is a general technique for solving optimization, search, and counting
+	problems that can be decomposed into subproblems</p>
+	<p>You
+	should consider using DP<b>
+	whenever you have to make choices to arrive at the solution</b>,
+	specifically, when the solution <b>relates
+	to subproblems.</b></p>
+	<p>DP
+	solves the problem by combining the solutions of multiple smaller
+	problems, but what makes DP different is that the same subproblem may
+	reoccur. Therefore, <b>a
+	key to making DP efficient is caching the results of intermediate
+	computations</b>.
+	Problems whose solutions use DP are a popular choice for hard
+	interview questions.</p>
+	<p>The
+	key to solving a DP problem efficiently is finding a way to break the
+	problem into subproblems such that 
+	</p>
+	<ul>
+	<li><p>the
+		original problem can be solved relatively easily once solutions to
+		the subproblems are available, and 
+		</p>
+	<li><p>these
+		subproblem solutions are cached.</p>
+	</ul>
+	<h2>Advices</h2>
+	<p>Consider
+	using DP whenever you have to make choices to arrive at the solution.
+	Specifically, DP is applicable when you can construct a solution to
+	the given instance from solutions to sub instances of smaller
+	problems of the same kind.</p>
+	<p>In
+	addition to optimization problems, DP is also applicable to counting
+	and decision problems—any problem where you can express a solution
+	recursively in terms of the same computation on smaller instances.</p>
+	<p>Although
+	conceptually DP involves recursion, often for efficiency the cache is
+	built “bottomup”, i.e., iteratively.</p>
+	<p>When
+	DP is implemented recursively the cache is typically a dynamic data
+	structure such as a hash table or a BST; when it is implemented
+	iteratively the cache is usually a one- or multi-dimensional array</p>
+	<p>To
+	save space, cache space may be recycled once it is known that a set
+	of entries will not be looked up again.</p>
+	<p>A
+	common mistake in solving DP problems is trying to think of the
+	recursive case by splitting the problem into two equal halves, a la
+	quicksort, i.e., solve the subproblems for subarrays A[0,b n 2 c] and
+	A[b n 2 c + 1, n] and combine the results. However, in most cases,
+	these two subproblems are not sufficient to solve the original
+	problem</p>
+	<p>DP
+	is based on <b>combining
+	solutions to subproblems</b>
+	to yield a solution to the original problem. However, for some
+	problems DP will not work. For example, if you need to compute the
+	longest path from City 1 to City 2 without repeating an intermediate
+	city, and this longest path passes through City 3, then the subpaths
+	from City 1 to City 3 and City 3 to City 2 may not be individually
+	longest paths without repeated cities</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Greedy Algorithms andInvariants </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<h2>Greedy Algorithm</h2>
+	<p>A
+	<b>greedy
+	algorithm</b>
+	is any <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a>
+	that follows the problem-solving heuristic of making the locally
+	optimal choice at each stage</p>
+	<p>A
+	greedy algorithm is often the right choice for an optimization
+	problem where there’s a natural set of choices to select from. 
+	</p>
+	<p>It’s
+	often easier to conceptualize a greedy algorithm recursively, and
+	then implement it using iteration for higher performance. 
+	</p>
+	<p>Even
+	if the greedy approach does not yield an optimum solution, it can
+	give insights into the optimum algorithm, or serve as a heuristic. 
+	</p>
+	<p>Sometimes
+	the correct greedy algorithm is not obvious</p>
+	<p>In
+	general, greedy algorithms have five components:</p>
+	<ol>
+	<li><p>A
+		candidate set, from which a solution is created</p>
+	<li><p>A
+		selection function, which chooses the best candidate to be added to
+		the solution</p>
+	<li><p>A
+		feasibility function, that is used to determine if a candidate can
+		be used to contribute to a solution</p>
+	<li><p>An
+		objective function, which assigns a value to a solution, or a
+		partial solution, and</p>
+	<li><p>A
+		solution function, which will indicate when we have discovered a
+		complete solution</p>
+	</ol>
+	<p>Greedy
+	algorithms produce good solutions on some <a href="https://en.wikipedia.org/wiki/Mathematical_problem">mathematical
+	problems</a>,
+	but not on others. Most problems for which they work will have two
+	properties:</p>
+	<p><b>Greedy
+	choice property</b></p>
+	<p>We
+	can make whatever choice seems best at the moment and then solve the
+	subproblems that arise later. The choice made by a greedy algorithm
+	may depend on choices made so far, but not on future choices or all
+	the solutions to the subproblem. It iteratively makes one greedy
+	choice after another, reducing each given problem into a smaller one.
+	In other words, a greedy algorithm never reconsiders its choices.
+	This is the main difference from <a href="https://en.wikipedia.org/wiki/Dynamic_programming">dynamic
+	programming</a>,
+	which is exhaustive and is guaranteed to find the solution. After
+	every stage, dynamic programming makes decisions based on all the
+	decisions made in the previous stage and may reconsider the previous
+	stage's algorithmic path to the solution.</p>
+	<p><b>Optimal
+	substructure</b></p>
+	<p>&quot;A
+	problem exhibits <a href="https://en.wikipedia.org/wiki/Optimal_substructure">optimal
+	substructure</a>
+	if an optimal solution to the problem contains optimal solutions to
+	the sub-problems.&quot;</p>
+	<h2>Invariants 
+	</h2>
+	<p>A
+	common approach to designing an efficient algorithm is to use
+	invariants. Briefly, an invariant is a condition that is true during
+	execution of a program. This condition may be on the values of the
+	variables of the program, or on the control logic. A well-chosen
+	invariant can be used to rule out potential solutions that are
+	suboptimal or dominated by other solutions.</p>
+	<ul>
+	<li><p>Identifying
+		the right invariant is an art. The key strategy to determine whether
+		to use an invariant when designing an algorithm is to work on small
+		examples to hypothesize the invariant. 
+		</p>
+	<li><p>Often,
+		the invariant is a subset of the set of input space, e.g,. a
+		subarray</p>
+	</ul>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Graphs </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p><a href="https://www2.math.ethz.ch/education/bachelor/lectures/fs2016/math/graph_theory/graph_theory_notes.pdf">Link
+	1,</a><a href="https://www.sgrrits.org/pdf/e-content/IT/23-4-17/UnitV-Connected-and-Disconnected-Graph.pdf">Link
+	2,</a><a href="http://mathonline.wikidot.com/graph-theory-theorems#toc0">Link
+	3,</a><a href="https://homepage.cs.uri.edu/faculty/hamel/courses/2012/fall2012/csc447/lecture-notes/csc447-ln024.pdf">Link
+	4</a></p>
+	<p>Informally,
+	a graph is a set of vertices and connected by edges. 
+	</p>
+	<p>Formally,
+	a directed graph is a set V of vertices and a set E ⊂ V × V of
+	edges. Given an edge e = (u, v), the vertex u is its source, and v is
+	its sink. 
+	</p>
+	<p>Graphs
+	are often decorated, e.g., by adding lengths to edges, weights to
+	vertices, a start vertex, etc.</p>
+	<p>A
+	path in a directed graph from u to vertex v is a sequence of vertices
+	hv0, v1, . . . , vn−1i where v0 = u, vn−1 = v, and each (vi ,
+	vi+1) is an edge. 
+	</p>
+	<p>The
+	sequence may consist of a single vertex. 
+	</p>
+	<p>The
+	length of the path hv0, v1, . . . , vn−1i is n − 1. 
+	</p>
+	<p>Intuitively,
+	the length of a path is the number of edges it traverses. If there
+	exists a path from u to v, v is said to be reachable from u.</p>
+	<h2>
+	Types of graphs</h2>
+		<div class='images'><img src='assets/Month 4/data/1.png'></div>	<p>A
+	directed acyclic graph (DAG) is a directed graph in which there are
+	no cycles, i.e., paths which contain one or more edges and which
+	begin and end at the same vertex</p>
+	<ul>
+	<li><p>Vertices in
+		a DAG which have no incoming edges are referred to as sources;
+		vertices which have no outgoing edges are referred to as sinks. 
+		</p>
+	</ul>
+		<div class='images'><img src='assets/Month 4/data/2.png'></div>	<ul>
+	<li><p>A
+		topological ordering of the vertices in a DAG is an ordering of the
+		vertices in which each edge is from a vertex earlier in the ordering
+		to a vertex later in the ordering.</p>
+	</ul>
+		<div class='images'><img src='assets/Month 4/data/3.png'></div>	<p>An
+	undirected graph is also a tuple (V, E); however, E is a set of
+	unordered pairs of vertices.</p>
+	<p>If
+	G is an undirected graph, vertices u and v are said to be connected
+	if G contains a path from u to v; otherwise, u and v are said to be
+	disconnected.</p>
+	<p>A
+	graph is said to be connected if every pair of vertices in the graph
+	is connected. A connected component is a maximal set of vertices C
+	such that each pair of vertices in C is connected in G. Every vertex
+	belongs to exactly one connected component.</p>
+	<p>A
+	directed graph is called weakly connected if replacing all of its
+	directed edges with undirected edges produces an undirected graph
+	that is connected. 
+	</p>
+	<ul>
+	<li><p><i>A
+		directed graph is weakly connected if there is a path between every
+		two vertices in the underlying undirected graph, which is the
+		undirected graph obtained by ignoring the directions of the edges of
+		the directed graph.</i></p>
+	</ul>
+	<p>It
+	is connected if it contains a directed path from u to v or a directed
+	path from v to u for every pair of vertices u and v.</p>
+	<p>It
+	is strongly connected if it contains a directed path from u to v and
+	a directed path from v to u for every pair of vertices u and v.</p>
+	<h2>Some theorems</h2>
+	<p>A graph G is said
+	to be disconnected if and only if vertex V can be portioned into two
+	nonempty, disjoint subsets v1 and v2 such that there exists no edge
+	in G whose one end vertex is subset v1 and the other in subset v2.</p>
+	<p>If a graph (connected or
+	disconnected) has exactly two vertices of odd degree, there must be a
+	path joining these two vertices.</p>
+	<p>A simple graph (without parallel
+	edges or self-loops) with n vertices and k components can have at
+	most (n-k)(n-k+1)/2 edges</p>
+	<h2>Notes</h2>
+	<p>Graphs
+	naturally arise when modeling geometric problems, such as determining
+	connected cities. However, they are more general, and can be used to
+	model many kinds of relationships. 
+	</p>
+	<p>A
+	graph can be implemented in two ways:</p>
+	<ul>
+	<li><p>Using
+		adjacency lists. In the adjacency list representation, each vertex
+		v, has a list of vertices to which it has an edge.</p>
+	<li><p>Adjacency
+		matrix. The adjacency matrix representation uses a |V| × |V|
+		Boolean-valued matrix indexed by vertices, with
+		a 1 indicating the presence of an edge.</p>
+	</ul>
+	<p>The
+	time and space complexities of a graph algorithm are usually
+	expressed as a function of the number of vertices and edges.</p>
+	<p>A
+	tree (sometimes called a free tree) is a special sort of graph—it
+	is an undirected graph that is connected but has no cycles</p>
+	<p>A
+	rooted tree is one where a designated vertex is called the root,
+	which leads to a parent-child relationship on the nodes.</p>
+	<p>An
+	ordered tree is a rooted tree in which each vertex has an ordering on
+	its children.</p>
+	<ul>
+	<li><p>Binary
+		trees, differ from ordered trees since a node may have only one
+		child in a binary tree, but that node may be a left or a right
+		child, whereas in an ordered tree no analogous notion exists for a
+		node with a single child</p>
+	</ul>
+	<h2>Advices</h2>
+	<p>It’s
+	natural to use a graph when the problem involves spatially connected
+	objects, e.g., road segments between cities. 
+	</p>
+	<p>More
+	generally, <b>consider
+	using a graph when you need to analyze any binary relationship</b>,
+	between objects, such as interlinked webpages, followers in a social
+	graph, etc. In such cases, quite often the problem can be reduced to
+	a well-known graph problem. 
+	</p>
+	<p>Some
+	graph problems entail analyzing structure, e.g., <b>looking
+	for cycles or connected components. DFS</b>
+	works particularly well for these applications. 
+	</p>
+	<p>Some
+	graph problems are related to <b>optimization</b>,
+	e.g., find the shortest path from one vertex to another. <b>BFS,
+	Dijkstra’s shortest path algorithm, and minimum spanning tree </b>are
+	examples of graph algorithms appropriate for optimization problems</p>
+	<h2>Search</h2>
+	<p>Computing
+	vertices which are reachable from other vertices is a fundamental
+	operation which can be performed in one of two idiomatic ways, namely
+	depth-first search (DFS) and breadth-first search (BFS). Both have
+	linear time complexity O(|V| + |E|) to be precise.</p>
+	<p>DFS
+	and BFS differ from each other in terms of the additional information
+	they provide, e.g., BFS can be used to compute distances from the
+	start vertex and DFS can be used to check for the presence of cycles.</p>
+
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle class="ExpansionPanel">
+    <mat-expansion-panel-header class="matPanelTitle">
+    <mat-panel-title>
+        <p> Parallel Computing </p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    		<p>High-end
+	computation is often done using clusters consisting of individual
+	computers communicating through a network.</p>
+	<p>Parallelism
+	provides a number of benefits: 
+	</p>
+	<ul>
+	<li><p>High
+		performance—more processors working on a task (usually) means it
+		is completed faster. 
+		</p>
+	<li><p>Better
+		use of resources—a program can execute while another waits on the
+		disk or network.  
+		</p>
+	<li><p>Fairness—letting
+		different users or programs share a machine rather than have one
+		program run at a time to completion. 
+		</p>
+	<li><p>Convenience—it
+		is often conceptually more straightforward to do a task using a set
+		of concurrent programs for the subtasks rather than have a single
+		program manage all the subtasks. 
+		</p>
+	<li><p>Fault
+		tolerance—if a machine fails in a cluster that is serving web
+		pages, the others can take over</p>
+	</ul>
+	<p>The
+	two primary models for parallel computation are:</p>
+	<ul>
+	<li><p>The
+		shared memory model, in which each processor can access any location
+		in memory</p>
+	<li><p>the
+		distributed memory model, in which a processor must explicitly send
+		a message to another processor to access its memory. 
+		</p>
+	</ul>
+	<p>The
+	former is more appropriate in the multicore setting and the latter is
+	more accurate for a cluster</p>
+	<p>Writing
+	correct parallel programs is challenging because of the subtle
+	interactions between parallel components. One of the key challenges
+	is <b>races</b>—<b>two
+	concurrent instruction </b>sequences
+	access the <b>same
+	address in memory </b>and
+	at <b>least
+	one of them writes </b>to
+	that address. Other challenges to correctness are 
+	</p>
+	<ul>
+	<li><p>starvation
+		(a processor needs a resource but never gets it)</p>
+	<li><p>deadlock
+		(Thread A acquires Lock L1 and Thread B acquires Lock L2, following
+		which A tries to acquire L2 and B tries to acquire L1)</p>
+	<li><p>livelock (a
+		processor keeps retrying an operation that always fails)</p>
+	</ul>
+	<p>Bugs
+	caused by these issues are difficult to find using testing. 
+	</p>
+	<ul>
+	<li><p>Debugging
+		them is also difficult because they may not be reproducible since
+		they are usually load dependent. 
+		</p>
+	<li><p>It
+		is also often true that it is not possible to realize the
+		performance implied by parallelism—sometimes a critical task
+		cannot be parallelized, making it impossible to improve performance,
+		regardless of the number of processors added. 
+		</p>
+	<li><p>The
+		overhead of communicating intermediate results between processors
+		can exceed the performance benefits.</p>
+	</ul>
+	<h2>Advices</h2>
+	<p>Start
+	with an algorithm that locks aggressively and is easily seen to be
+	correct. Then add back concurrency, while ensuring the critical parts
+	are locked. 
+	</p>
+	<p>When
+	analyzing parallel code, assume a worst-case thread scheduler. In
+	particular, it may choose to schedule the same thread repeatedly, it
+	may alternate between two threads, it may starve a thread, etc.</p>
+	<p>Try
+	to work at a higher level of abstraction. In particular, know the
+	concurrency libraries— don’t implement your own semaphores,
+	thread pools, deferred execution, etc. (You should know how these
+	features are implemented, and implement them if asked to.)</p>
+
+</mat-expansion-panel>
