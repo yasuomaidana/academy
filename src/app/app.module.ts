@@ -50,6 +50,7 @@ import { ChaptersComponent } from './menu/monthly/month4/book3/chapters/chapters
 import { PartsComponent } from './menu/monthly/month4/book4/parts/parts.component';
 import { Part1Component } from './menu/monthly/month4/book4/parts/part1/part1.component';
 import { Part2Component } from './menu/monthly/month4/book4/parts/part2/part2.component';
+import { Week21Component } from './menu/weekly/week21/week21.component';
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import { Part2Component } from './menu/monthly/month4/book4/parts/part2/part2.co
     ChaptersComponent,
     PartsComponent,
     Part1Component,
-    Part2Component
+    Part2Component,
+    Week21Component
     
   ],
   imports: [
